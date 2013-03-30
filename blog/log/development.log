@@ -8599,3 +8599,43 @@ Processing by Doorkeeper::TokensController#create as */*
   [1m[36m (83.0ms)[0m  [1mCOMMIT[0m
   [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
 Completed 200 OK in 666ms (Views: 0.4ms | ActiveRecord: 84.5ms)
+
+
+Started GET "/oauth/applications" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Processing by Doorkeeper::ApplicationsController#index as HTML
+  [1m[36mDoorkeeper::Application Load (0.1ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` [0m
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/index.html.erb within layouts/doorkeeper/application (36.5ms)
+Completed 200 OK in 191ms (Views: 154.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/doorkeeper/application.css?body=1" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Served asset /doorkeeper/application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/doorkeeper/form.css?body=1" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Served asset /doorkeeper/form.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Served asset /jquery.js - 304 Not Modified (56ms)
+
+
+Started GET "/assets/doorkeeper/application.js?body=1" for 127.0.0.1 at 2013-03-30 14:34:52 +0700
+Served asset /doorkeeper/application.js - 304 Not Modified (10ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:35:03 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = 'a03cd3159abe37f38cea19cca2c453681baf2f3a8096ce26360610c140018dad' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 07:35:03', 7200, NULL, 1, NULL, '', 'a03cd3159abe37f38cea19cca2c453681baf2f3a8096ce26360610c140018dad')
+  [1m[36m (82.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Completed 200 OK in 879ms (Views: 0.5ms | ActiveRecord: 87.3ms)
