@@ -9624,3 +9624,59 @@ Processing by Api::V1::ArticlesController#index as JSON
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
   [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
 Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=&_=1364636524915" for 127.0.0.1 at 2013-03-30 16:42:07 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"", "_"=>"1364636524915"}
+  [1m[36mDoorkeeper::AccessToken Load (0.6ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '' LIMIT 1[0m
+Filter chain halted as #<Proc:0xb639f4c@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 15ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/homes/login" for 127.0.0.1 at 2013-03-30 16:42:34 +0700
+
+ActionController::RoutingError (No route matches [GET] "/homes/login"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 16:42:51 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '17217cc680a48af62453aa9fd112a762753e3fb66b941bf94a314fd49f48bdc5' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 09:42:51', 7200, NULL, 1, NULL, '', '17217cc680a48af62453aa9fd112a762753e3fb66b941bf94a314fd49f48bdc5')
+  [1m[36m (75.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Completed 200 OK in 753ms (Views: 0.5ms | ActiveRecord: 80.3ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=17217cc680a48af62453aa9fd112a762753e3fb66b941bf94a314fd49f48bdc5&_=1364636575617" for 127.0.0.1 at 2013-03-30 16:42:58 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"17217cc680a48af62453aa9fd112a762753e3fb66b941bf94a314fd49f48bdc5", "_"=>"1364636575617"}
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '17217cc680a48af62453aa9fd112a762753e3fb66b941bf94a314fd49f48bdc5' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 0.9ms)
