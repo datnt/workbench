@@ -9161,3 +9161,466 @@ Processing by Api::V1::ArticlesController#index as JSON
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
   [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1
 Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636140954" for 127.0.0.1 at 2013-03-30 16:35:43 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636140954"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 90ms (Views: 0.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636181820" for 127.0.0.1 at 2013-03-30 16:36:23 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636181820"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636197561" for 127.0.0.1 at 2013-03-30 16:36:38 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636197561"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636205484" for 127.0.0.1 at 2013-03-30 16:36:46 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636205484"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636230696" for 127.0.0.1 at 2013-03-30 16:37:12 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636230696"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636243356" for 127.0.0.1 at 2013-03-30 16:37:24 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636243356"}
+  [1m[35mDoorkeeper::AccessToken Load (8.0ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636306035" for 127.0.0.1 at 2013-03-30 16:38:27 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636306035"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 77ms (Views: 0.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636318815" for 127.0.0.1 at 2013-03-30 16:38:39 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636318815"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  Rendered articles/index.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 174ms (Views: 171.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /application.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /articles.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /sessions.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (89ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (71ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:50 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:51 +0700
+Served asset /articles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:51 +0700
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:51 +0700
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:51 +0700
+Served asset /users.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:51 +0700
+Served asset /application.js - 304 Not Modified (50ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Processing by ArticlesController#new as HTML
+  Rendered articles/new.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 16:38:59 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xxe/2QOIAQRjO3w9u7lYdbjXDunTA3kNKh0dxu0CP3M=", "article"=>{"name"=>"second post", "content"=>"second post"}, "commit"=>"Create Article"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `articles` (`author_name`, `content`, `created_at`, `name`, `published_at`, `updated_at`, `user_id`) VALUES (NULL, 'second post', '2013-03-30 09:39:04', 'second post', NULL, '2013-03-30 09:39:04', 1)
+  [1m[36m (62.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `articles` SET `published_at` = '2013-03-30 09:39:04', `updated_at` = '2013-03-30 09:39:04' WHERE `articles`.`id` = 2[0m
+  [1m[35m (51.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 115.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  Rendered articles/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /articles.css - 304 Not Modified (58ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 16:39:04 +0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636318816" for 127.0.0.1 at 2013-03-30 16:39:07 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636318816"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364636360819" for 127.0.0.1 at 2013-03-30 16:39:21 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364636360819"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.5ms)

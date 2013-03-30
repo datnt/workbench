@@ -1,7 +1,7 @@
 <a href="javascript:;" id="queryid">hello world</a>
 <script type="text/javascript">
   function callbackName(){
-    alert('asdf');
+    //alert('asdf');
   }
   $(document).ready(function(){
     $('#queryid').click(function(){
@@ -19,8 +19,10 @@
           xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
         },
         success: function(data) {
-          alert('1+'+data);
-          console.dir(data);
+          for (i=0;i<data.articles.length;i++){
+            console.log('a == '+data.articles[i].content);
+          }
+
         }
       });
     });

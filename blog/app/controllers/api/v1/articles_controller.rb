@@ -6,20 +6,34 @@ module Api
 
       def index
         #        respond_with current_user.articles
-        @article = current_user.articles.last
-        
-        @str = {
-          :article => [
-            {
-              :id => @article.id,
-            }
-          ]
-          
+#        @article = current_user.articles.last
+#
+#        @str = {
+#          :article => [
+#            {
+#              :id => @article.id,
+#            }
+#          ]
+#
+#
+#        }
 
+        arr1 = []
+        current_user.articles.each do |a|
+          objx={
+            :id=>a.id,
+            :content=>a.content
+          }
+          arr1 << objx
+        end
+
+        @str = {
+          :articles=> arr1
         }
 
 
         render :json => @str,:callback => params[:callback]
+
       end
 
       def create
