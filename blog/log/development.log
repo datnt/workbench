@@ -7845,3 +7845,757 @@ Served asset /bootstrap.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 13:16:14 +0700
 Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  Rendered articles/index.html.erb within layouts/application (40.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 380ms (Views: 342.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /articles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /sessions.css - 304 Not Modified (67ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:25 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (101ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /articles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 13:29:26 +0700
+Served asset /application.js - 304 Not Modified (56ms)
+
+
+Started GET "/oauth/applications" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Processing by Doorkeeper::ApplicationsController#index as HTML
+  [1m[36mDoorkeeper::Application Load (0.4ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` [0m
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/index.html.erb within layouts/doorkeeper/application (1.9ms)
+Completed 200 OK in 100ms (Views: 94.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/doorkeeper/form.css?body=1" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Served asset /doorkeeper/form.css - 200 OK (5ms)
+
+
+Started GET "/assets/doorkeeper/application.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Served asset /doorkeeper/application.js - 200 OK (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/doorkeeper/application.css?body=1" for 127.0.0.1 at 2013-03-30 13:45:21 +0700
+Served asset /doorkeeper/application.css - 200 OK (7ms)
+
+
+Started GET "/oauth/applications/new" for 127.0.0.1 at 2013-03-30 13:45:24 +0700
+Processing by Doorkeeper::ApplicationsController#new as HTML
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/_form.html.erb (11.7ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/new.html.erb within layouts/doorkeeper/application (33.6ms)
+Completed 200 OK in 57ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:24 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:24 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started POST "/oauth/applications" for 127.0.0.1 at 2013-03-30 13:45:35 +0700
+Processing by Doorkeeper::ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1pKJDJft/jJv9EiATxEIH4B6MjaSRlvipeVux1XxAQ=", "application"=>{"name"=>"Test Client", "redirect_uri"=>"http://localhost/todo/callback"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mDoorkeeper::Application Load (0.5ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.4ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36mDoorkeeper::Application Exists (0.5ms)[0m  [1mSELECT 1 FROM `oauth_applications` WHERE `oauth_applications`.`uid` = BINARY '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `oauth_applications` (`created_at`, `name`, `redirect_uri`, `secret`, `uid`, `updated_at`) VALUES ('2013-03-30 06:45:35', 'Test Client', 'http://localhost/todo/callback', '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6', '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62', '2013-03-30 06:45:35')
+  [1m[36m (67.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/oauth/applications/1
+Completed 302 Found in 251ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth/applications/1" for 127.0.0.1 at 2013-03-30 13:45:36 +0700
+Processing by Doorkeeper::ApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDoorkeeper::Application Load (0.5ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`id` = 1 LIMIT 1
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/show.html.erb within layouts/doorkeeper/application (3.2ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:36 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:36 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/oauth/applications/1/edit" for 127.0.0.1 at 2013-03-30 13:45:38 +0700
+Processing by Doorkeeper::ApplicationsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`id` = 1 LIMIT 1[0m
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/_form.html.erb (4.7ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/edit.html.erb within layouts/doorkeeper/application (7.5ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:38 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:38 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started PUT "/oauth/applications/1" for 127.0.0.1 at 2013-03-30 13:45:43 +0700
+Processing by Doorkeeper::ApplicationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1pKJDJft/jJv9EiATxEIH4B6MjaSRlvipeVux1XxAQ=", "application"=>{"name"=>"Test Client", "redirect_uri"=>"http://localhost:3001/todo/callback"}, "commit"=>"Submit", "id"=>"1"}
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::Application Exists (0.6ms)[0m  SELECT 1 FROM `oauth_applications` WHERE (`oauth_applications`.`uid` = BINARY '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`id` != 1) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mUPDATE `oauth_applications` SET `redirect_uri` = 'http://localhost:3001/todo/callback', `updated_at` = '2013-03-30 06:45:43' WHERE `oauth_applications`.`id` = 1[0m
+  [1m[35m (89.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/oauth/applications/1
+Completed 302 Found in 107ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth/applications/1" for 127.0.0.1 at 2013-03-30 13:45:43 +0700
+Processing by Doorkeeper::ApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDoorkeeper::Application Load (0.5ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`id` = 1 LIMIT 1[0m
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/show.html.erb within layouts/doorkeeper/application (2.1ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:43 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 13:45:43 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/oauth/authorize?username=ngothiendat@gmail.com" for 127.0.0.1 at 2013-03-30 13:56:30 +0700
+Processing by Doorkeeper::AuthorizationsController#new as */*
+  Parameters: {"username"=>"ngothiendat@gmail.com"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_resource_owner! rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-03-30 13:56:30 +0700
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/oauth/authorize?username=ngothiendat@gmail.com&password=[FILTERED]&response_type=code&client_id=8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62&redirect_uri=http%3A%2F%2Flocalhost%3A3001%2Fauth%2Ftodo%2Fcallback" for 127.0.0.1 at 2013-03-30 13:57:14 +0700
+Processing by Doorkeeper::AuthorizationsController#new as */*
+  Parameters: {"username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "response_type"=>"code", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "redirect_uri"=>"http://localhost:3001/auth/todo/callback"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Filter chain halted as :authenticate_resource_owner! rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-03-30 13:57:14 +0700
+Processing by SessionsController#new as */*
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 98ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:10:12 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+Completed 500 Internal Server Error in 53ms
+
+ArgumentError (Unknown key: email):
+  config/initializers/doorkeeper.rb:14:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.5ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-30 14:10:54 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  Rendered articles/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 194ms (Views: 159.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /application.css - 200 OK (25ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 200 OK (85ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /articles.css - 200 OK (3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /bootstrap_and_overrides.css - 200 OK (21ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 200 OK (13ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /sessions.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /jquery.js - 200 OK (12ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /users.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (70ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (13ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /articles.js - 200 OK (10ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap.js - 200 OK (46ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /bootstrap.js - 200 OK (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /sessions.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /users.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:55 +0700
+Served asset /application.js - 200 OK (52ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /application.css - 304 Not Modified (26ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 14:10:58 +0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-03-30 14:11:04 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xxe/2QOIAQRjO3w9u7lYdbjXDunTA3kNKh0dxu0CP3M=", "email"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 308ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  Rendered articles/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Completed 200 OK in 61ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /application.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-30 14:11:05 +0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/oauth/applications" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Processing by Doorkeeper::ApplicationsController#index as HTML
+  [1m[36mDoorkeeper::Application Load (0.5ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` [0m
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/app/views/doorkeeper/applications/index.html.erb within layouts/doorkeeper/application (5.9ms)
+Completed 200 OK in 59ms (Views: 40.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/doorkeeper/application.css?body=1" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Served asset /doorkeeper/application.css - 200 OK (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/doorkeeper/form.css?body=1" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Served asset /doorkeeper/form.css - 200 OK (7ms)
+
+
+Started GET "/assets/doorkeeper/application.js?body=1" for 127.0.0.1 at 2013-03-30 14:15:27 +0700
+Served asset /doorkeeper/application.js - 200 OK (10ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:18:04 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (Unknown key: email):
+  config/initializers/doorkeeper.rb:14:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.6ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:18:07 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (Unknown key: email):
+  config/initializers/doorkeeper.rb:14:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.4ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:18:17 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (Unknown key: email):
+  config/initializers/doorkeeper.rb:14:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.4ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:20:39 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (Unknown key: email):
+  config/initializers/doorkeeper.rb:14:in `block (2 levels) in <top (required)>'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.5ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:22:21 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.5ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::AccessToken Load (0.4ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '5f627461024964e4f391f779897613e3824065132cb977541ae1cdbc3055c483' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 07:22:22', 7200, NULL, 1, NULL, '', '5f627461024964e4f391f779897613e3824065132cb977541ae1cdbc3055c483')[0m
+  [1m[35m (64.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+Completed 200 OK in 880ms (Views: 0.5ms | ActiveRecord: 71.1ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:23:03 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDoorkeeper::AccessToken Load (0.4ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = 'd9115bcc444187adce34fbad3a293815f6f3e72ae9802da64b9408ce702dcd89' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 07:23:04', 7200, NULL, 1, NULL, '', 'd9115bcc444187adce34fbad3a293815f6f3e72ae9802da64b9408ce702dcd89')
+  [1m[36m (83.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Completed 200 OK in 666ms (Views: 0.4ms | ActiveRecord: 84.5ms)

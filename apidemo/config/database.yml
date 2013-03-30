@@ -12,7 +12,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: apidemo_development
+  database: apidemo
   pool: 5
   username: root
   password:
