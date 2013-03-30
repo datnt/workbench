@@ -8639,3 +8639,46 @@ Processing by Doorkeeper::TokensController#create as */*
   [1m[36m (82.5ms)[0m  [1mCOMMIT[0m
   [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
 Completed 200 OK in 879ms (Views: 0.5ms | ActiveRecord: 87.3ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:48:20 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"asd", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1
+Completed 401 Unauthorized in 47ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:49:29 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"asd", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1
+Completed 401 Unauthorized in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:57:09 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"asd", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.4ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'asd' LIMIT 1
+Completed 401 Unauthorized in 5ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 14:57:14 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::AccessToken Load (0.4ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '1276190ff463a1b13d76ebb25126ab23b811533defa05a22a13b1cdf25fb05ac' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 07:57:14', 7200, NULL, 1, NULL, '', '1276190ff463a1b13d76ebb25126ab23b811533defa05a22a13b1cdf25fb05ac')[0m
+  [1m[35m (108.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+Completed 200 OK in 698ms (Views: 0.4ms | ActiveRecord: 110.1ms)
