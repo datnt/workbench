@@ -8682,3 +8682,482 @@ Processing by Doorkeeper::TokensController#create as */*
   [1m[35m (108.6ms)[0m  COMMIT
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
 Completed 200 OK in 698ms (Views: 0.4ms | ActiveRecord: 110.1ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 15:01:02 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = 'a44974406d15cd5ea9763424f3d5da42d2acdeee1cd447e69a6229c76bb5ee73' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 08:01:02', 7200, NULL, 1, NULL, '', 'a44974406d15cd5ea9763424f3d5da42d2acdeee1cd447e69a6229c76bb5ee73')
+  [1m[36m (64.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Completed 200 OK in 654ms (Views: 0.4ms | ActiveRecord: 65.8ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 15:05:14 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::AccessToken Load (0.4ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '19119251f50f25f21060a67717708476ee56d6c08c83252f2d309be31d4d97a7' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 08:05:14', 7200, NULL, 1, NULL, '', '19119251f50f25f21060a67717708476ee56d6c08c83252f2d309be31d4d97a7')[0m
+  [1m[35m (64.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+Completed 200 OK in 650ms (Views: 0.4ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/api/articles?callback=jQuery191018754064990207553_1364630839461&alt=json-in-script&_=1364630839462" for 127.0.0.1 at 2013-03-30 15:07:19 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery191018754064990207553_1364630839461", "alt"=>"json-in-script", "_"=>"1364630839462"}
+Filter chain halted as #<Proc:0xb6b0bc4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=jQuery19104638993984553963_1364630859764&alt=json-in-script&_=1364630859765" for 127.0.0.1 at 2013-03-30 15:07:43 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery19104638993984553963_1364630859764", "alt"=>"json-in-script", "_"=>"1364630859765"}
+Filter chain halted as #<Proc:0xb6b0bc4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=jQuery19104638993984553963_1364630859766&alt=json-in-script&_=1364630859767" for 127.0.0.1 at 2013-03-30 15:09:21 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery19104638993984553963_1364630859766", "alt"=>"json-in-script", "_"=>"1364630859767"}
+Filter chain halted as #<Proc:0xb6b0bc4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=jQuery19104638993984553963_1364630859766&alt=json-in-script&_=1364630859767" for 127.0.0.1 at 2013-03-30 15:09:23 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery19104638993984553963_1364630859766", "alt"=>"json-in-script", "_"=>"1364630859767"}
+Filter chain halted as #<Proc:0xb6b0bc4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=jQuery19104638993984553963_1364630859768&alt=json-in-script&_=1364630859769" for 127.0.0.1 at 2013-03-30 15:10:16 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery19104638993984553963_1364630859768", "alt"=>"json-in-script", "_"=>"1364630859769"}
+Filter chain halted as #<Proc:0xac872c4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=jQuery19104638993984553963_1364630859770&alt=json-in-script&_=1364630859771" for 127.0.0.1 at 2013-03-30 15:13:02 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"jQuery19104638993984553963_1364630859770", "alt"=>"json-in-script", "_"=>"1364630859771"}
+Filter chain halted as #<Proc:0xac872c4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:13:29 +0700
+
+ActionController::RoutingError (No route matches [OPTIONS] "/api/articles"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:13:37 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"alt"=>"json-in-script"}
+Filter chain halted as #<Proc:0xac872c4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:13:40 +0700
+
+ActionController::RoutingError (No route matches [OPTIONS] "/api/articles"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.6ms)
+
+
+Started OPTIONS "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:17:37 +0700
+
+ActionController::RoutingError (No route matches [OPTIONS] "/api/articles"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started OPTIONS "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:19:01 +0700
+
+ActionController::RoutingError (No route matches [OPTIONS] "/api/articles"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started OPTIONS "/api/articles?alt=json-in-script" for 127.0.0.1 at 2013-03-30 15:19:57 +0700
+
+ActionController::RoutingError (No route matches [OPTIONS] "/api/articles"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/api/articles?alt=json-in-script&_=1364631654107" for 127.0.0.1 at 2013-03-30 15:20:55 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"alt"=>"json-in-script", "_"=>"1364631654107"}
+Filter chain halted as #<Proc:0xac872c4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 15:28:54 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::AccessToken Load (0.4ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = 'f984db63ee23a6a5fe7545e4a89f7b8ace54e6473a26c39ecc23e4aea7baf4cc' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 08:28:54', 7200, NULL, 1, NULL, '', 'f984db63ee23a6a5fe7545e4a89f7b8ace54e6473a26c39ecc23e4aea7baf4cc')[0m
+  [1m[35m (85.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+Completed 200 OK in 911ms (Views: 0.5ms | ActiveRecord: 91.7ms)
+
+
+Started GET "/api/articles?callback=callbackName&alt=json-in-script&_=1364632138614" for 127.0.0.1 at 2013-03-30 15:29:02 +0700
+Processing by Api::V1::ArticlesController#index as 
+  Parameters: {"callback"=>"callbackName", "alt"=>"json-in-script", "_"=>"1364632138614"}
+Filter chain halted as #<Proc:0xb444d68@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 15:50:21 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+  [1m[35mDoorkeeper::Application Load (0.2ms)[0m  SELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mDoorkeeper::AccessToken Load (0.5ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '44a39d23163a3f19508a519fddf9a49e8cb614a7132e085d659f006fb61ea6ba' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 08:50:21', 7200, NULL, 1, NULL, '', '44a39d23163a3f19508a519fddf9a49e8cb614a7132e085d659f006fb61ea6ba')[0m
+  [1m[35m (71.4ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1[0m
+Completed 200 OK in 1202ms (Views: 0.6ms | ActiveRecord: 78.8ms)
+
+
+Started GET "/api/articles?callback=callbackName&alt=json-in-script&_=1364633425645" for 127.0.0.1 at 2013-03-30 15:50:28 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "alt"=>"json-in-script", "_"=>"1364633425645"}
+Filter chain halted as #<Proc:0xb58e8f4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&alt=json-in-script&_=1364633586351" for 127.0.0.1 at 2013-03-30 15:53:09 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "alt"=>"json-in-script", "_"=>"1364633586351"}
+Filter chain halted as #<Proc:0xb58e8f4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/oauth/token" for 127.0.0.1 at 2013-03-30 16:02:35 +0700
+Processing by Doorkeeper::TokensController#create as */*
+  Parameters: {"grant_type"=>"password", "username"=>"ngothiendat@gmail.com", "password"=>"[FILTERED]", "client_id"=>"8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62", "client_secret"=>"510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+  [1m[36mDoorkeeper::Application Load (0.2ms)[0m  [1mSELECT `oauth_applications`.* FROM `oauth_applications` WHERE `oauth_applications`.`uid` = '8b08fd049e27b76e3fef76a618ed5e21b1a58aade53b9c6ccfaee3a2f6126f62' AND `oauth_applications`.`secret` = '510ac64ceaf449cd7c7f5ced7233a5655d4d7c1ff6873b3f39c52ab45cab27d6' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mDoorkeeper::AccessToken Load (0.5ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `oauth_access_tokens` (`application_id`, `created_at`, `expires_in`, `refresh_token`, `resource_owner_id`, `revoked_at`, `scopes`, `token`) VALUES (1, '2013-03-30 09:02:35', 7200, NULL, 1, NULL, '', '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30')
+  [1m[36m (66.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'ngothiendat@gmail.com' LIMIT 1
+Completed 200 OK in 660ms (Views: 0.5ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&alt=json-in-script&_=1364634164295" for 127.0.0.1 at 2013-03-30 16:02:47 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "alt"=>"json-in-script", "_"=>"1364634164295"}
+Filter chain halted as #<Proc:0xb58e8f4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634499396" for 127.0.0.1 at 2013-03-30 16:08:22 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634499396"}
+Filter chain halted as #<Proc:0xb58e8f4@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634499397" for 127.0.0.1 at 2013-03-30 16:10:46 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634499397"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `articles' for nil:NilClass):
+  app/controllers/api/v1/articles_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.8ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (90.6ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (147.7ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634499398" for 127.0.0.1 at 2013-03-30 16:11:48 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634499398"}
+Filter chain halted as #<Proc:0xb481f4c@/usr/local/ruby/lib/ruby/gems/1.9.1/gems/doorkeeper-0.4.2/lib/doorkeeper/helpers/filter.rb:8> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634499399" for 127.0.0.1 at 2013-03-30 16:12:03 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634499399"}
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `articles' for nil:NilClass):
+  app/controllers/api/v1/articles_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.6ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.6ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (75.8ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634805416" for 127.0.0.1 at 2013-03-30 16:13:27 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634805416"}
+  [1m[36mDoorkeeper::AccessToken Load (0.8ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 249ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&Authorization=Bearer+6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634805417" for 127.0.0.1 at 2013-03-30 16:13:42 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "Authorization"=>"Bearer 6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634805417"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.6ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 92ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634858622" for 127.0.0.1 at 2013-03-30 16:14:20 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634858622"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364634935106" for 127.0.0.1 at 2013-03-30 16:15:36 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364634935106"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635083093" for 127.0.0.1 at 2013-03-30 16:18:04 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635083093"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635105183" for 127.0.0.1 at 2013-03-30 16:18:29 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635105183"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 65ms
+
+NameError (uninitialized constant Mime::JSONP):
+  app/controllers/api/v1/articles_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.3ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635105184" for 127.0.0.1 at 2013-03-30 16:19:35 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635105184"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 144ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635186629" for 127.0.0.1 at 2013-03-30 16:19:48 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635186629"}
+  [1m[36mDoorkeeper::AccessToken Load (0.3ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635213232" for 127.0.0.1 at 2013-03-30 16:20:16 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635213232"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635230098" for 127.0.0.1 at 2013-03-30 16:20:31 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635230098"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635292830" for 127.0.0.1 at 2013-03-30 16:21:33 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635292830"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 189ms
+
+RuntimeError (In order to use respond_with, first you need to declare the formats your controller responds to in the class level):
+  app/controllers/api/v1/articles_controller.rb:8:in `index'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.4ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.4ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635579800" for 127.0.0.1 at 2013-03-30 16:26:26 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635579800"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (33.0ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1
+Completed 200 OK in 111ms (Views: 0.5ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635655620" for 127.0.0.1 at 2013-03-30 16:27:37 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635655620"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 81ms (Views: 0.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635681483" for 127.0.0.1 at 2013-03-30 16:28:03 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635681483"}
+  [1m[35mDoorkeeper::AccessToken Load (0.3ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635716097" for 127.0.0.1 at 2013-03-30 16:28:37 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635716097"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30&_=1364635729746" for 127.0.0.1 at 2013-03-30 16:28:50 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30", "_"=>"1364635729746"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '6db8542b05cdfe67defbf0d6ae8e9a4c750c99937e120524318c1a1d3a730e30' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 1 ORDER BY `articles`.`id` DESC LIMIT 1
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms)

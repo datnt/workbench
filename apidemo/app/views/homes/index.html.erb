@@ -1,1 +1,29 @@
-hello world
+<a href="javascript:;" id="queryid">hello world</a>
+<script type="text/javascript">
+  function callbackName(){
+    alert('asdf');
+  }
+  $(document).ready(function(){
+    $('#queryid').click(function(){
+      $.ajax({
+        url: "http://localhost:3000/api/articles",
+        dataType: 'jsonp',
+        type : 'GET',
+        crossDomain: true,
+        jsonpCallback: "callbackName",
+        data: {
+          access_token: '<%= session[:auth_token] %>'
+        },
+        beforeSend: function (xhr, settings) {
+          xhr.withCredentials = true;
+          xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
+        },
+        success: function(data) {
+          alert('1+'+data);
+          console.dir(data);
+        }
+      });
+    });
+    
+  });
+</script>
