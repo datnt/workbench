@@ -8,6 +8,8 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
   def create
-    
+    @category  = Category.new(params[:category])
+    @category.save
+    redirect_to :action => "index"
   end
 end
