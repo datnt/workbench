@@ -39,6 +39,7 @@
     });
 
     function Prepare(val,sid){
+      $('#comment_box_'+sid).val('');
       $.ajax({
         url: "http://localhost:3000/api/articles/comment",
         dataType: 'json',
