@@ -32,6 +32,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update_attributes(params[:article])
+      @article.update_category(params[:category])
       redirect_to @article, notice: "Article has been updated."
     else
       render "edit"

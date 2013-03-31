@@ -8,5 +8,13 @@ class Article < ActiveRecord::Base
   def categories
     Category.where("id in (?)",self.article_scopes.map(&:category_id))
   end
+  def update_category(arr)
+    self.article_scopes.each do |c|
+      c.destroy
+    end
+    arr.each do |c|
+      ArticleScope.create(:article => self, :category_id => c)
+    end
+  end
   
 end
