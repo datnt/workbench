@@ -1,7 +1,10 @@
 <a href="javascript:;" id="queryid">Browse all posts</a><br/>
+<a href="javascript:;" id="querycategoryid">Browse all categories</a><br/>
 
 <h1>Articles</h1>
 
+<div id="Category">
+</div>
 <div id="articles">
 </div>
 
@@ -11,6 +14,27 @@
     //alert('asdf');
   }
   $(document).ready(function(){
+    $('#querycategoryid').click(function(){
+      $.ajax({
+        url: "http://localhost:3000/api/articles/categories",
+        dataType: 'json',
+        type : 'GET',
+        crossDomain: true,
+        jsonpCallback: "callbackName",
+        data: {
+          access_token: '<%= session[:auth_token] %>'
+        },
+        beforeSend: function (xhr, settings) {
+          xhr.withCredentials = true;
+          xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
+        },
+        success: function(data) {
+          for (i=0;i<data.categories.length;i++){
+            $('#Category').append('<div class="alert alert-success">'+data.categories[i].name+'</div>');
+          }
+        }
+      });
+    });
     $('#post_newid').click(function(){
       $.ajax({
         url: "http://localhost:3000/api/articles",

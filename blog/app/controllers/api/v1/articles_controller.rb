@@ -51,6 +51,23 @@ module Api
         render :json => str
       end
       
+      def categories
+        arr1 = []
+        Category.all.each do |a|
+          objx={
+            :id=>a.id,
+            :name=>a.name,
+          }
+          arr1 << objx
+        end
+
+        str = {
+          :categories=> arr1
+        }
+
+
+        render :json => str,:callback => params[:callback]
+      end
       def comments
         arr1 = []
         article = Article.find(params[:id])

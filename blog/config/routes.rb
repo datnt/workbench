@@ -5,7 +5,7 @@ Blog::Application.routes.draw do
     scope module: :v1 do
       resources :articles do
         collection do
-          get :comments
+          get :comments, :categories
           post :comment
         end
       end

@@ -35711,3 +35711,77 @@ Processing by Api::V1::ArticlesController#comments as JSON
   [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1[0m
   [1m[35mComment Load (0.8ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 15 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
 Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.2ms)
+
+
+Started OPTIONS "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:55:46 +0700
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:55:46 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+Completed 500 Internal Server Error in 39ms
+
+NameError (uninitialized constant Api::V1::ArticlesController::Cateory):
+  app/controllers/api/v1/articles_controller.rb:56:in `categories'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.8ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:56:10 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+Completed 500 Internal Server Error in 41ms
+
+NoMethodError (undefined method `each' for #<Class:0xbf7c618>):
+  app/controllers/api/v1/articles_controller.rb:56:in `categories'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.7ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:56:25 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` 
+Completed 200 OK in 50ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:56:45 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT `categories`.* FROM `categories` 
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:56:57 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/articles/categories?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68" for 127.0.0.1 at 2013-03-31 16:57:05 +0700
+Processing by Api::V1::ArticlesController#categories as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` 
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364723824770" for 127.0.0.1 at 2013-03-31 16:57:07 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364723824770"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 122ms (Views: 0.8ms | ActiveRecord: 2.1ms)
