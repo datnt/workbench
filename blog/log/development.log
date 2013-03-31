@@ -35587,3 +35587,127 @@ Processing by Api::V1::ArticlesController#comments as JSON
   [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1
   [1m[36mComment Load (0.2ms)[0m  [1mSELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 15 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC[0m
 Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started OPTIONS "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:49:27 +0700
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:49:27 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"15", "comment"=>"yes"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `comments` (`comment`, `commentable_id`, `commentable_type`, `created_at`, `title`, `updated_at`, `user_id`) VALUES ('yes', 15, 'Article', '2013-03-31 09:49:27', 'N/A', '2013-03-31 09:49:27', 2)
+  [1m[36m (63.9ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 77ms (Views: 0.5ms | ActiveRecord: 65.1ms)
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:49:30 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"15", "comment"=>"haha"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mDoorkeeper::AccessToken Load (0.3ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `comments` (`comment`, `commentable_id`, `commentable_type`, `created_at`, `title`, `updated_at`, `user_id`) VALUES ('haha', 15, 'Article', '2013-03-31 09:49:30', 'N/A', '2013-03-31 09:49:30', 2)
+  [1m[36m (66.0ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 77ms (Views: 0.6ms | ActiveRecord: 67.1ms)
+
+
+Started OPTIONS "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=16" for 127.0.0.1 at 2013-03-31 16:49:32 +0700
+
+
+Started GET "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=16" for 127.0.0.1 at 2013-03-31 16:49:32 +0700
+Processing by Api::V1::ArticlesController#comments as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"16"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.5ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 16 LIMIT 1[0m
+  [1m[35mComment Load (65.8ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 16 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 66.5ms)
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:49:41 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"16", "comment"=>"wait"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 16 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `comments` (`comment`, `commentable_id`, `commentable_type`, `created_at`, `title`, `updated_at`, `user_id`) VALUES ('wait', 16, 'Article', '2013-03-31 09:49:41', 'N/A', '2013-03-31 09:49:41', 2)[0m
+  [1m[35m (58.8ms)[0m  COMMIT
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 59.9ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364723383348" for 127.0.0.1 at 2013-03-31 16:49:44 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364723383348"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=16" for 127.0.0.1 at 2013-03-31 16:49:45 +0700
+Processing by Api::V1::ArticlesController#comments as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"16"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 16 LIMIT 1[0m
+  [1m[35mComment Load (0.6ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 16 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364723390461" for 127.0.0.1 at 2013-03-31 16:49:51 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364723390461"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:49:54 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"16", "comment"=>"another"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mDoorkeeper::AccessToken Load (0.3ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 16 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `comments` (`comment`, `commentable_id`, `commentable_type`, `created_at`, `title`, `updated_at`, `user_id`) VALUES ('another', 16, 'Article', '2013-03-31 09:49:54', 'N/A', '2013-03-31 09:49:54', 2)
+  [1m[36m (77.2ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 87ms (Views: 0.4ms | ActiveRecord: 78.5ms)
+
+
+Started GET "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=16" for 127.0.0.1 at 2013-03-31 16:49:55 +0700
+Processing by Api::V1::ArticlesController#comments as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"16"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 16 LIMIT 1[0m
+  [1m[35mComment Load (0.8ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 16 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364723447539" for 127.0.0.1 at 2013-03-31 16:50:48 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364723447539"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started OPTIONS "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=15" for 127.0.0.1 at 2013-03-31 16:50:49 +0700
+
+
+Started GET "/api/articles/comments?access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&id=15" for 127.0.0.1 at 2013-03-31 16:50:49 +0700
+Processing by Api::V1::ArticlesController#comments as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"15"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1[0m
+  [1m[35mComment Load (0.8ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 15 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.2ms)
