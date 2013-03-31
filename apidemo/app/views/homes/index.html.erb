@@ -5,11 +5,6 @@
 <h1>Articles</h1>
 
 <div id="articles">
-    <h2>
-    </h2>
-    <div class="info">
-    </div>
-    <div class="content"></div>
 </div>
 
 
@@ -57,9 +52,12 @@
           xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
         },
         success: function(data) {
+          $('#articles').html('');
           for (i=0;i<data.articles.length;i++){
-            $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div>")
-            console.log('a == '+data.articles[i].content);
+            $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div><div id='comment_"+data.articles[i].id+"'>Comment</div>")
+            $('#comment_'+data.articles[i].id).click(function(){
+              PostAComment(data.articles[i].id);
+            });
           }
 
         }
@@ -67,4 +65,7 @@
     });
     
   });
+  function PostAComment(){
+
+  }
 </script>
