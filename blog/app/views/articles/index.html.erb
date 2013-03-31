@@ -3,7 +3,8 @@
 <div id="articles">
 <% @articles.each do |article| %>
   <h2>
-    <%= link_to article.name, article %>
+    <%= link_to article.name, article %> | 
+    <%= link_to "Edit", edit_article_path(article) %>
   </h2>
   <div class="info">
     Posted on: <%= article.published_at.strftime('%b %d, %Y') %>
