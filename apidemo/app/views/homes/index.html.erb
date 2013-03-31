@@ -79,10 +79,14 @@
           $('#articles').html('');
           for (i=0;i<data.articles.length;i++){
             var id = data.articles[i].id;
-            $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div><input type='text' placeholder='Comment' id='comment_box_"+id+"'/><div class='btn' id='comment_"+id+"'>Comment</div>")
+            $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div><input type='text' placeholder='Comment' id='comment_box_"+id+"'/><div class='btn' id='comment_"+id+"'>Comment</div><div class='btn' id='showcomment_"+id+"'>Show Comment</div>")
             $('#comment_'+id).click(function(){
               var this_id = $(this).attr('id').split('_')[1];
               Prepare($('#comment_box_'+this_id).val(),this_id);
+            });
+            $('#showcomment_'+id).click(function(){
+              var this_id = $(this).attr('id').split('_')[1];
+              alert('this) = '+this_id);
             });
           }
 
