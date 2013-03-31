@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   has_many :comments
-  has_many :article_scopes
+  has_many :article_scopes, :dependent => :destroy
   belongs_to :user
 
   acts_as_commentable
