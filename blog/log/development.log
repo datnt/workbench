@@ -34622,3 +34622,174 @@ Processing by Api::V1::ArticlesController#index as JSON
   [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
   [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
 Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720254828" for 127.0.0.1 at 2013-03-31 16:00:14 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720254828"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720435937" for 127.0.0.1 at 2013-03-31 16:00:38 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720435937"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720469711" for 127.0.0.1 at 2013-03-31 16:01:10 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720469711"}
+  [1m[35mDoorkeeper::AccessToken Load (6.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720515479" for 127.0.0.1 at 2013-03-31 16:01:58 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720515479"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720543899" for 127.0.0.1 at 2013-03-31 16:02:25 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720543899"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720555442" for 127.0.0.1 at 2013-03-31 16:02:37 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720555442"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720574427" for 127.0.0.1 at 2013-03-31 16:02:56 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720574427"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720616912" for 127.0.0.1 at 2013-03-31 16:03:38 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720616912"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720635111" for 127.0.0.1 at 2013-03-31 16:03:56 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720635111"}
+  [1m[35mDoorkeeper::AccessToken Load (0.3ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720724778" for 127.0.0.1 at 2013-03-31 16:05:25 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720724778"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720735139" for 127.0.0.1 at 2013-03-31 16:05:39 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720735139"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720782551" for 127.0.0.1 at 2013-03-31 16:06:24 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720782551"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720806583" for 127.0.0.1 at 2013-03-31 16:06:47 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720806583"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720826955" for 127.0.0.1 at 2013-03-31 16:07:09 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720826955"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720837302" for 127.0.0.1 at 2013-03-31 16:07:18 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720837302"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364720999556" for 127.0.0.1 at 2013-03-31 16:10:00 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364720999556"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721041399" for 127.0.0.1 at 2013-03-31 16:10:42 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721041399"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721088162" for 127.0.0.1 at 2013-03-31 16:11:29 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721088162"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721122824" for 127.0.0.1 at 2013-03-31 16:12:03 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721122824"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
