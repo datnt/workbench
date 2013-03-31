@@ -42,7 +42,8 @@ class ArticlesController < ApplicationController
       :comment =>
         {
         :id => @comment.id,
-        :content => @comment.comment
+        :content => @comment.comment,
+        :user_email => current_user.email
       }
     }
 
