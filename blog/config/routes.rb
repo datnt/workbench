@@ -22,4 +22,8 @@ Blog::Application.routes.draw do
       post :comment
     end
   end
+  resources :categories  do
+    collection do
+    end
+  end
 end
