@@ -1,0 +1,8 @@
+<h1><%= @category.name %></h1>
+<%= @category.description %>
+<br/>
+
+<p>
+  <%= link_to "Edit", edit_category_path(@category) %> |
+  <%= link_to "Browse Categories", categories_path %>
+</p>

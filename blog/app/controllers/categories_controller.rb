@@ -12,4 +12,18 @@ class CategoriesController < ApplicationController
     @category.save
     redirect_to :action => "index"
   end
+  def edit
+    @category = Category.find(params[:id])
+  end
+  def update
+    @category = Category.find(params[:id])
+    if @category.update_attributes(params[:category])
+      redirect_to @category, notice: "Category has been updated."
+    else
+      render "edit"
+    end
+  end
+  def show
+    @category = Category.find(params[:id])
+  end
 end
