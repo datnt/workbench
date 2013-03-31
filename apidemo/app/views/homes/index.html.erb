@@ -55,9 +55,11 @@
           xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
         },
         success: function(data) {
+          $('#comment_box_'+sid).before('<div class="alert">'+data.comment.comment+'</div>');
           alert('query xong');
           console.dir(data);
           console.log('a == '+data.comment.comment);
+          
 
         }
       });
