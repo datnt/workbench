@@ -1,9 +1,34 @@
-<a href="javascript:;" id="queryid">hello world</a>
+<a href="javascript:;" id="queryid">hello world</a><br/>
+<a href="javascript:;" id="post_newid">Create A new post</a>
 <script type="text/javascript">
   function callbackName(){
     //alert('asdf');
   }
   $(document).ready(function(){
+    $('#post_newid').click(function(){
+      $.ajax({
+        url: "http://localhost:3000/api/articles",
+        dataType: 'json',
+        type : 'POST',
+        crossDomain: true,
+        jsonpCallback: "callbackName",
+        data: {
+          access_token: '<%= session[:auth_token] %>',
+          name: "name",
+          content: 'api'
+        },
+        beforeSend: function (xhr, settings) {
+          xhr.withCredentials = true;
+          xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
+        },
+        success: function(data) {
+          alert('query xong');
+          console.dir(data);
+            console.log('a == '+data.article.content);
+
+        }
+      });
+    });
     $('#queryid').click(function(){
       $.ajax({
         url: "http://localhost:3000/api/articles",

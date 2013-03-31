@@ -6,17 +6,17 @@ module Api
 
       def index
         #        respond_with current_user.articles
-#        @article = current_user.articles.last
-#
-#        @str = {
-#          :article => [
-#            {
-#              :id => @article.id,
-#            }
-#          ]
-#
-#
-#        }
+        #        @article = current_user.articles.last
+        #
+        #        @str = {
+        #          :article => [
+        #            {
+        #              :id => @article.id,
+        #            }
+        #          ]
+        #
+        #
+        #        }
 
         arr1 = []
         current_user.articles.each do |a|
@@ -41,7 +41,17 @@ module Api
         @article.published_at =@article.created_at
         @article.save
 
-        respond_with @article
+        @str = {
+          :article => 
+            {
+            :id => @article.id,
+            :content => @article.content
+          }
+        }
+
+
+        #        respond_with @article
+        render :json => @str
       end
     end
   end
