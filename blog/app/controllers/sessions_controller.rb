@@ -1,5 +1,8 @@
 class SessionsController < ApplicationController
   def new
+    if current_user
+      redirect_to root_url, notice: "Logged in!"
+    end
   end
   
   def create
