@@ -22,6 +22,7 @@ module Api
         current_user.articles.each do |a|
           objx={
             :id=>a.id,
+            :name=>a.name,
             :content=>a.content
           }
           arr1 << objx

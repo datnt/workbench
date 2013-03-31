@@ -1,5 +1,18 @@
-<a href="javascript:;" id="queryid">hello world</a><br/>
+<a href="javascript:;" id="queryid">Browse all posts</a><br/>
 <a href="javascript:;" id="post_newid">Create A new post</a>
+
+
+<h1>Articles</h1>
+
+<div id="articles">
+    <h2>
+    </h2>
+    <div class="info">
+    </div>
+    <div class="content"></div>
+</div>
+
+
 <script type="text/javascript">
   function callbackName(){
     //alert('asdf');
@@ -24,7 +37,7 @@
         success: function(data) {
           alert('query xong');
           console.dir(data);
-            console.log('a == '+data.article.content);
+          console.log('a == '+data.article.content);
 
         }
       });
@@ -45,6 +58,7 @@
         },
         success: function(data) {
           for (i=0;i<data.articles.length;i++){
+            $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div>")
             console.log('a == '+data.articles[i].content);
           }
 

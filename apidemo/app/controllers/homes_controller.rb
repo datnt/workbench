@@ -13,7 +13,8 @@ class HomesController < ApplicationController
       access_token = client1.password.get_token(params[:email], params[:password])
       session[:auth_token] = access_token.token
 
-      render :text => access_token.token
+#      render :text => access_token.token
+      render :action => "index"
     rescue
       render :text => 'login failed'
     end

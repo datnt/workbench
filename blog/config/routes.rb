@@ -3,7 +3,12 @@ Blog::Application.routes.draw do
 
   namespace :api, defaults: {format: 'json'} do
     scope module: :v1 do
-      resources :articles
+      resources :articles do
+        collection do
+          get :comments
+          post :comment
+        end
+      end
       match 'user', to: 'users#show'
     end
   end
