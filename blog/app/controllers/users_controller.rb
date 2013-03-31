@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   def new
+    if current_user
+      redirect_to root_url, notice: "You are currently logged in!"
+    end
     @user = User.new
   end
 
