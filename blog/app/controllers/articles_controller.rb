@@ -15,6 +15,15 @@ class ArticlesController < ApplicationController
     @article.save
     @article.published_at =@article.created_at
     @article.save
+    puts "=="
+    puts "=="
+    puts "=="
+    puts "=="
+    puts "=="
+    puts "=="
+    params[:category].each do |c|
+      ArticleScope.create(:article => @article, :category_id => c)
+    end
     redirect_to :action => "index"
   end
 

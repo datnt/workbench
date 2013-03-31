@@ -14,7 +14,10 @@
   <% end %>
 
   <div class="field">
-    <%= select("article", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {:include_blank => false}, :class => "span3") %>
+    <% for c in Category.find(:all) %>
+      <%= check_box_tag "category[]", c.id %>
+      <%= c.name %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
