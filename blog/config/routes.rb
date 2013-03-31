@@ -17,5 +17,9 @@ Blog::Application.routes.draw do
   resources :sessions
 
   root to: 'articles#index'
-  resources :articles
+  resources :articles  do
+    collection do
+      post :comment
+    end
+  end
 end

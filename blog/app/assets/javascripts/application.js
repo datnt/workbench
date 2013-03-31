@@ -14,3 +14,21 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+function SendComment(line, apost_id, postUrl){
+    //DATNT: This function is used within courses/boxes/_outstream_item.html.erb,
+    //also, the same partial is used by home/feed
+    $.ajax({
+        url: postUrl,
+        type : 'POST',
+        data: {
+            line: line,
+            id: apost_id
+        },
+        success: function(data){
+            $('#comment_box').before(data.comment.content);
+        },
+        error: function(){
+        }
+    });
+}

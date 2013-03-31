@@ -1,0 +1,15 @@
+<input type="text" class="" placeholder="Comment" id="comment_box"/>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#comment_box').bind('keypress',function(e){
+      var code = (e.keyCode ? e.keyCode : e.which);
+      if(code == 13) { //Enter keycode
+        var value = $('#comment_box').val();
+        $('#comment_box').val('');
+        SendComment(value,"<%= @article.id %>","<%= comment_articles_path %>");
+        return false;
+      }
+    });
+
+  });
+</script>
