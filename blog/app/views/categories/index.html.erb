@@ -1,13 +1,10 @@
-<h1>Articles</h1>
+<h1>Categories</h1>
 
 <div id="articles">
-<% @articles.each do |article| %>
-  <h2>
-    <%= link_to article.name, article %>
-  </h2>
-  <div class="info">
-    Posted on: <%= article.published_at.strftime('%b %d, %Y') %>
-  </div>
-  <div class="content"><%= article.content %></div>
-<% end %>
+  <% @categories.each do |c| %>
+    <h2>
+      <%= link_to c.name, c %>
+    </h2>
+    <div class="content"><%= c.content %></div>
+  <% end %>
 </div>
