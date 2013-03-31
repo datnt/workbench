@@ -2,21 +2,8 @@ module Api
   module V1
     class ArticlesController < BaseController
       doorkeeper_for :all
-      #      respond_to :json
 
       def index
-        #        respond_with current_user.articles
-        #        @article = current_user.articles.last
-        #
-        #        @str = {
-        #          :article => [
-        #            {
-        #              :id => @article.id,
-        #            }
-        #          ]
-        #
-        #
-        #        }
 
         arr1 = []
         current_user.articles.each do |a|
@@ -49,9 +36,6 @@ module Api
             :content => @article.content
           }
         }
-
-
-        #        respond_with @article
         render :json => @str
       end
       def comment
@@ -64,9 +48,6 @@ module Api
             :comment => @comment.comment
           }
         }
-
-
-        #        respond_with @article
         render :json => @str
       end
     end
