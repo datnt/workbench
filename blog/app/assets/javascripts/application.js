@@ -26,8 +26,6 @@ function SendComment(line, apost_id, postUrl){
             id: apost_id
         },
         success: function(data){
-            $('#comment_box').before(data.comment.user_email+'<br/>');
-            $('#comment_box').before(data.comment.content+'<br/>');
         },
         error: function(){
         }

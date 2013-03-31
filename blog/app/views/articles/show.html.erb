@@ -3,13 +3,9 @@
 <br/>
 
 <% @article.comments.each do |c| %>
-  <ul class="the-icons clearfix">
-    <li style="list-style: none;">
-      
-      <a class="user_avatar" href="#" data-toggle="tooltip" title="<%= c.user.email %>"><i class="icon-user"></i></a>
-    </li>
-  </ul>
-  &nbsp;<%= c.comment %> <br/>
+  <%= render :partial => "/articles/box/comment_item", :locals => {:c => c} %>
+  
+  
 <% end %>
 <% if current_user %>
   <%= render :partial => "/articles/box/comment" %>
@@ -18,6 +14,3 @@
   <%= link_to "Edit", edit_article_path(@article) %> |
   <%= link_to "Browse Articles", articles_path %>
 </p>
-<script>
-  $('a.user_avatar').tooltip();
-</script>

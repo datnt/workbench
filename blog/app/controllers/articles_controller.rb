@@ -38,17 +38,5 @@ class ArticlesController < ApplicationController
   def comment
     article = Article.find(params[:id])
     @comment = article.comments.create(:title => "N/A", :comment => params[:line], :user_id => current_user.id)
-    @str = {
-      :comment =>
-        {
-        :id => @comment.id,
-        :content => @comment.comment,
-        :user_email => current_user.email
-      }
-    }
-
-
-    #        respond_with @article
-    render :json => @str
   end
 end

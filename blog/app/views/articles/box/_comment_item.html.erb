@@ -1,0 +1,12 @@
+<ul class="the-icons clearfix">
+  <li style="list-style: none;">
+
+    <a id="cmt_<%= c.id %>" class="user_avatar" href="#" data-toggle="tooltip" title="<%= c.user.email %>"><i class="icon-user"></i></a>
+  </li>
+</ul>
+<%= c.comment %> <br/>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#cmt_<%= c.id %>').tooltip();
+  });
+</script>
