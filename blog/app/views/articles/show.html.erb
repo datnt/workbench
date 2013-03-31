@@ -1,6 +1,9 @@
 <h1><%= @article.name %></h1>
 <%= @article.content %>
 <br/>
+<% @article.comments.each do |c| %>
+  <%= c.user.email %>&nbsp;<%= c.comment %> <br/>
+<% end %>
 <% if current_user %>
   <%= render :partial => "/articles/box/comment" %>
 <% end %>
