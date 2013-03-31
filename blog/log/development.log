@@ -11300,3 +11300,14 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-31 09:27:01 +0700
 Served asset /application.js - 304 Not Modified (5ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateArticles (20120130184408)
+Migrating to CreateUsers (20120224225432)
+Migrating to CreateDoorkeeperTables (20130330031240)
+Migrating to CreateComments (20130331023119)
+  [1m[35m (110.5ms)[0m  CREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(50) DEFAULT '', `comment` text, `commentable_id` int(11), `commentable_type` varchar(255), `user_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (201.8ms)[0m  [1mCREATE INDEX `index_comments_on_commentable_type` ON `comments` (`commentable_type`)[0m
+  [1m[35m (237.3ms)[0m  CREATE INDEX `index_comments_on_commentable_id` ON `comments` (`commentable_id`)
+  [1m[36m (201.7ms)[0m  [1mCREATE INDEX `index_comments_on_user_id` ON `comments` (`user_id`)[0m
+  [1m[35m (32.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130331023119')
+  [1m[36m (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m

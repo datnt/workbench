@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem "doorkeeper"
 gem 'rack-cors', :require => 'rack/cors'
+gem 'acts_as_commentable', '3.0.1'
 
 
 # To use Jbuilder templates for JSON
