@@ -26,4 +26,13 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
   end
+  def destroy
+    category = Category.find(params[:id])
+    arr =ArticleScope.where(:id => category.id)
+    arr.each do |a|
+      a.destroy
+    end
+    category.destroy
+    redirect_to :action => "index"
+  end
 end

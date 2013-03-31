@@ -11,6 +11,9 @@
   <%= render :partial => "/articles/box/comment" %>
 <% end %>
 <p>
-  <%= link_to "Edit", edit_article_path(@article) %> |
+  <% if current_user == @article.user %>
+    <%= link_to "Edit", edit_article_path(@article) %>
+    <%= link_to 'Delete', article_path(@article), :confirm => 'Are you sure want to delete this post?', :method => :delete, :title => 'Destroy'  %>
+  <% end %>
   <%= link_to "Browse Articles", articles_path %>
 </p>
