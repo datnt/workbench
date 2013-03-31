@@ -4,8 +4,8 @@
 
 <% @article.comments.each do |c| %>
   <%= render :partial => "/articles/box/comment_item", :locals => {:c => c} %>
-  
-  
+
+
 <% end %>
 <% if current_user %>
   <%= render :partial => "/articles/box/comment" %>
