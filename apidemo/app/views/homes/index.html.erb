@@ -60,6 +60,29 @@
         }
       });
     }
+    function GetComments(sid){
+      $.ajax({
+        url: "http://localhost:3000/api/articles/comments",
+        dataType: 'json',
+        type : 'GET',
+        crossDomain: true,
+        jsonpCallback: "callbackName",
+        data: {
+          access_token: '<%= session[:auth_token] %>',
+          id: sid
+        },
+        beforeSend: function (xhr, settings) {
+          xhr.withCredentials = true;
+          xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
+        },
+        success: function(data) {
+          for (i=0;i<data.comments.length;i++){
+            $('#comment_box_'+sid).before('<div class="alert alert-success">'+data.comments[i].comment+'</div>');
+          }
+          
+        }
+      });
+    }
     
     $('#queryid').click(function(){
       $.ajax({
@@ -86,7 +109,7 @@
             });
             $('#showcomment_'+id).click(function(){
               var this_id = $(this).attr('id').split('_')[1];
-              alert('this) = '+this_id);
+              GetComments(this_id);
             });
           }
 

@@ -40,15 +40,35 @@ module Api
       end
       def comment
         article = Article.find(params[:id])
-        @comment = article.comments.create(:title => "N/A", :comment => params[:comment], :user_id => current_user.id)
-        @str = {
+        comment = article.comments.create(:title => "N/A", :comment => params[:comment], :user_id => current_user.id)
+        str = {
           :comment =>
             {
-            :id => @comment.id,
-            :comment => @comment.comment
+            :id => comment.id,
+            :comment => comment.comment
           }
         }
-        render :json => @str
+        render :json => str
+      end
+      
+      def comments
+        arr1 = []
+        article = Article.find(params[:id])
+        comments = article.comments
+        comments.each do |a|
+          objx={
+            :id=>a.id,
+            :comment=>a.comment,
+          }
+          arr1 << objx
+        end
+
+        str = {
+          :comments=> arr1
+        }
+
+
+        render :json => str,:callback => params[:callback]
       end
     end
   end
