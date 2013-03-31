@@ -37,6 +37,31 @@
         }
       });
     });
+
+    function Prepare(val,sid){
+      $.ajax({
+        url: "http://localhost:3000/api/articles/comment",
+        dataType: 'json',
+        type : 'POST',
+        crossDomain: true,
+        jsonpCallback: "callbackName",
+        data: {
+          access_token: '<%= session[:auth_token] %>',
+          id: sid,
+          comment: val
+        },
+        beforeSend: function (xhr, settings) {
+          xhr.withCredentials = true;
+          xhr.setRequestHeader('Authorization', 'Bearer <%= session[:auth_token] %>');
+        },
+        success: function(data) {
+          alert('query xong');
+          console.dir(data);
+          console.log('a == '+data.comment.comment);
+
+        }
+      });
+    }
     
     $('#queryid').click(function(){
       $.ajax({
@@ -59,7 +84,7 @@
             $('#articles').append("<h2>"+data.articles[i].name+"</h2>"+"<div class='content'>"+data.articles[i].content+"</div><input type='text' placeholder='Comment' id='comment_box_"+id+"'/><div id='comment_"+id+"'>Comment</div>")
             $('#comment_'+id).click(function(){
               var this_id = $(this).attr('id').split('_')[1];
-              alert('v = '+$('#comment_box_'+this_id).val());
+              Prepare($('#comment_box_'+this_id).val(),this_id);
             });
           }
 

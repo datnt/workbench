@@ -34793,3 +34793,455 @@ Processing by Api::V1::ArticlesController#index as JSON
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
   [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
 Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721233418" for 127.0.0.1 at 2013-03-31 16:13:54 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721233418"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721262308" for 127.0.0.1 at 2013-03-31 16:14:22 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721262308"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721500089" for 127.0.0.1 at 2013-03-31 16:18:22 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721500089"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 131ms (Views: 1.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721553538" for 127.0.0.1 at 2013-03-31 16:19:15 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721553538"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 179ms (Views: 0.9ms | ActiveRecord: 6.0ms)
+
+
+Started OPTIONS "/api/v1/articles/comment" for 127.0.0.1 at 2013-03-31 16:19:20 +0700
+
+
+Started POST "/api/v1/articles/comment" for 127.0.0.1 at 2013-03-31 16:19:20 +0700
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/articles/comment"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721553539" for 127.0.0.1 at 2013-03-31 16:21:22 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721553539"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721553540" for 127.0.0.1 at 2013-03-31 16:21:22 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721553540"}
+  [1m[35mDoorkeeper::AccessToken Load (0.3ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721553541" for 127.0.0.1 at 2013-03-31 16:21:25 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721553541"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721553542" for 127.0.0.1 at 2013-03-31 16:21:25 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721553542"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721689123" for 127.0.0.1 at 2013-03-31 16:21:32 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721689123"}
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/v1/articles/comment" for 127.0.0.1 at 2013-03-31 16:21:36 +0700
+
+ActionController::RoutingError (No route matches [POST] "/api/v1/articles/comment"):
+  actionpack (3.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.1) lib/action_dispatch/middleware/static.rb:53:in `call'
+  railties (3.2.1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.1) lib/rails/application.rb:220:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.1) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/ruby/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721783669" for 127.0.0.1 at 2013-03-31 16:23:06 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721783669"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started OPTIONS "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:23:08 +0700
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:23:08 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"15", "comment"=>"asdf"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Article without an ID):
+  app/controllers/api/v1/articles_controller.rb:58:in `comment'
+
+
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.7ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /usr/local/ruby/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.1ms)
+
+
+Started GET "/api/articles?callback=callbackName&access_token=499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68&_=1364721836869" for 127.0.0.1 at 2013-03-31 16:23:58 +0700
+Processing by Api::V1::ArticlesController#index as JSON
+  Parameters: {"callback"=>"callbackName", "access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "_"=>"1364721836869"}
+  [1m[35mDoorkeeper::AccessToken Load (0.2ms)[0m  SELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`user_id` = 2
+Completed 200 OK in 81ms (Views: 1.3ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/api/articles/comment" for 127.0.0.1 at 2013-03-31 16:24:02 +0700
+Processing by Api::V1::ArticlesController#comment as JSON
+  Parameters: {"access_token"=>"499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68", "id"=>"15", "comment"=>"asdf"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mDoorkeeper::AccessToken Load (0.2ms)[0m  [1mSELECT `oauth_access_tokens`.* FROM `oauth_access_tokens` WHERE `oauth_access_tokens`.`token` = '499eb421d063a457538badbb2d7083eca2b05cc74e545f88f2a44869048a0f68' LIMIT 1[0m
+  [1m[35mArticle Load (0.5ms)[0m  SELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `comments` (`comment`, `commentable_id`, `commentable_type`, `created_at`, `title`, `updated_at`, `user_id`) VALUES ('asdf', 15, 'Article', '2013-03-31 09:24:02', 'N/A', '2013-03-31 09:24:02', 2)[0m
+  [1m[35m (65.6ms)[0m  COMMIT
+Completed 200 OK in 108ms (Views: 0.5ms | ActiveRecord: 69.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1mSELECT `articles`.* FROM `articles` [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered articles/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /categories.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:12 +0700
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/articles/15" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT `articles`.* FROM `articles` WHERE `articles`.`id` = 15 LIMIT 1[0m
+  [1m[35mComment Load (0.7ms)[0m  SELECT `comments`.* FROM `comments` WHERE `comments`.`commentable_id` = 15 AND `comments`.`commentable_type` = 'Article' ORDER BY created_at ASC
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered articles/box/_comment_item.html.erb (3.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+  Rendered articles/box/_comment.html.erb (0.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered articles/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 119ms (Views: 114.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /categories.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-03-31 16:24:15 +0700
+Served asset /application.js - 304 Not Modified (6ms)

@@ -54,6 +54,21 @@ module Api
         #        respond_with @article
         render :json => @str
       end
+      def comment
+        article = Article.find(params[:id])
+        @comment = article.comments.create(:title => "N/A", :comment => params[:comment], :user_id => current_user.id)
+        @str = {
+          :comment =>
+            {
+            :id => @comment.id,
+            :comment => @comment.comment
+          }
+        }
+
+
+        #        respond_with @article
+        render :json => @str
+      end
     end
   end
 end
