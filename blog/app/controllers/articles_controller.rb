@@ -13,7 +13,6 @@ class ArticlesController < ApplicationController
     @article = Article.new(params[:article])
     @article.user = current_user
     @article.save
-    @article.published_at =@article.created_at
     @article.save
     params[:category].each do |c|
       ArticleScope.create(:article => @article, :category_id => c)
@@ -47,5 +46,11 @@ class ArticlesController < ApplicationController
   def comment
     article = Article.find(params[:id])
     @comment = article.comments.create(:title => "N/A", :comment => params[:line], :user_id => current_user.id)
+  end
+  def publish
+    article = Article.find(params[:id])
+    article.published_at = Time.now
+    article.save
+    redirect_to :action => "index"
   end
 end

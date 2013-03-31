@@ -20,6 +20,7 @@ Blog::Application.routes.draw do
   resources :articles  do
     collection do
       post :comment
+      get :publish
     end
   end
   resources :categories  do

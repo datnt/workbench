@@ -2,16 +2,32 @@
 
 <div id="articles">
   <% @articles.each do |article| %>
-    <h2>
-      <%= link_to article.name, article %> |
-      <% if current_user == article.user %>
-        <%= link_to "Edit", edit_article_path(article) %>
-        <%= link_to 'Delete', article_path(article), :confirm => 'Are you sure want to delete this post?', :method => :delete, :title => 'Destroy'  %>
-      <% end %>
-    </h2>
-    <div class="info">
-      Posted on: <%= article.published_at.strftime('%b %d, %Y') %>
-    </div>
-    <div class="content"><%= article.content %></div>
+    <% if article.published_at != nil && current_user == article.user %>
+      <h2>
+        <%= link_to article.name, article %> |
+        <% if current_user == article.user %>
+          <%= link_to "Edit", edit_article_path(article) %>
+          <%= link_to 'Delete', article_path(article), :confirm => 'Are you sure want to delete this post?', :method => :delete, :title => 'Destroy'  %>
+        <% end %>
+      </h2>
+      <div class="info">
+        Posted on: <%= article.published_at.strftime('%b %d, %Y') %>
+      </div>
+      <div class="content"><%= article.content %></div>
+
+    <% elsif current_user == article.user %>
+      <h2>
+        <%= link_to article.name, article %> |
+        <% if current_user == article.user %>
+          <%= link_to "Edit", edit_article_path(article) %>
+          <%= link_to 'Delete', article_path(article), :confirm => 'Are you sure want to delete this post?', :method => :delete, :title => 'Destroy'  %>
+        <% end %>
+      </h2>
+      <div class="info">
+        Posted on: N/A | <%= link_to "Publish now", publish_articles_path(:id => article) %>
+      </div>
+      <div class="content"><%= article.content %></div>
+      
+    <% end %>
   <% end %>
 </div>
