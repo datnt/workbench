@@ -5,13 +5,17 @@
     <div class="error_messages">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
       <ul>
-      <% @article.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
+
   <% end %>
 
+  <div class="field">
+    <%= select("article", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {:include_blank => false}, :class => "span3") %>
+  </div>
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
