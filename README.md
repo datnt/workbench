@@ -17,3 +17,41 @@ gem 'rack-cors', :require => 'rack/cors'
         resource '*', :headers => :any, :methods => [:get, :post, :options]
       end
     end
+
+
+=========
+Below is the custom authentication for Opro Oauth. Here is the convention:
+1> If user submit useremail & password then authen by user & password
+2> If not then authen by credential of application owner.
+
+
+Opro.setup do |config|
+  ## Configure the auth_strategy or use set :login_method, :logout_method, & :authenticate_user_method
+  #config.auth_strategy = :devise
+
+  config.login_method             { |controller, current_user| controller.sign_in(current_user, :bypass => true) }
+  config.logout_method            { |controller, current_user| controller.sign_out(current_user) }
+  config.authenticate_user_method { |controller| controller.authenticate_user! }
+
+
+  config.find_user_for_auth do |controller, params|
+    user = User.find_by_email(params[:username])
+    if user
+      if !user.valid_password?(params[:password])
+        return false
+      end
+    elsif params[:username] == ""
+      app = Opro::Oauth::ClientApp.where(:app_id => params[:client_id]).where(:app_secret => params[:client_secret]).first
+      if app
+        user = app.user
+      else
+        false
+      end
+    else
+      false
+    end
+
+    user
+  end
+
+end
