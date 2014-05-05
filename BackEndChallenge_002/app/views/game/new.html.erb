@@ -1,0 +1,46 @@
+<div class='col-md-6'>
+  <div class="container">
+    <%= form_for(@game, :url => game_index_path, :html => { :method => :post, :id => "new_game" }) do |f| %>
+      <div class="row">
+        <%= flash[:message] if !flash[:message].nil? %>
+        <h2>New game</h2>
+      </div>
+      <div class="row">
+        <label>Generate new game</label>
+        <span>
+          <%= f.text_field :name, :readonly => true %>
+        </span>
+      </div>
+      <div class="row">
+        <label>or fight with a "waiting for adversary" game</label>
+        <span>
+          <input name="adversary_game" type="text" value="">
+        </span>
+      </div>
+      <div class="row">
+        <label>My move</label>
+        <span>
+          <%= game_acts %>
+        </span>
+      </div>
+      <div class="row">
+        <button type="button" id="reset_moves">Reset</button>
+      </div>
+      <div class="row">
+        <textarea id="moves" class="player_moves" name="player_moves"></textarea>
+        <ul class="list-group" id="left_hand_list">
+        </ul>
+      </div>
+      <div class="row">
+        <button class="fight_btn" id="fight_button">Fight</button>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+<div class='col-md-6'>
+  <div class="container adversary_move">
+
+  </div>
+
+</div>

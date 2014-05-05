@@ -1,0 +1,25 @@
+<div class='col-md-6'>
+  <div class="container">
+    <div class="row" id='adversary_status'>
+      <%= raw  top_right %>
+    </div>
+    <div class="row">
+      <label>Game UUID</label>
+      <span>
+        <input name="game_uuid" type="text" value="<%= @game.name %>" readonly>
+      </span>
+    </div>
+    <div class="row">
+      <ul class="list-group" id="adversary_moves">
+        <% @result.each_with_index do |item, i| %>
+          <% iwin = (item=="L" ? "win" : "") %>
+          <li class="list-group-item <%= iwin %>">
+            <%= @adversary_moves_arr[i] %>
+          </li>
+        <% end %>
+      </ul>
+      <h2><%= @loose.size %></h2>
+    </div>
+  </div>
+
+</div>

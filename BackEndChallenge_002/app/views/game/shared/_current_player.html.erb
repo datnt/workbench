@@ -1,0 +1,36 @@
+<div class='col-md-6'>
+  <div class="container">
+    <div class="row" id='game_status'>
+      <%= raw top_left %>
+    </div>
+    <div class="row">
+      <label>Game UUID</label>
+      <span>
+        <input name="game_uuid" type="text" value="<%= @game.name %>" readonly>
+      </span>
+    </div>
+    <div class="row left">
+      <% if @result %>
+        <ul class="list-group" id="left_hand_list">
+          <% @result.each_with_index do |item, i| %>
+            <% iwin = (item=="W" ? "win" : "") %>
+            <li class="list-group-item <%= iwin %>">
+              <%= @current_player_moves_arr[i] %>
+            </li>
+          <% end %>
+        </ul>
+        <h2><%= @win.size %></h2>
+      <% else %>
+        <ul class="list-group" id="left_hand_list">
+          <% @current_player_moves_arr.each do |item| %>
+
+            <li class="list-group-item">
+              <%= item %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+
+</div>

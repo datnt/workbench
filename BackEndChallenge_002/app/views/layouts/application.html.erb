@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BackEndChallenge002</title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "#{FAYE_PATH[:url]}/faye.js" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="row header">
+      <a href="/" data-no-turbolink=true>
+        <i class="glyphicon glyphicon-home"></i>
+      </a>
+    </div>
+    <%= yield %>
+
+  </body>
+</html>

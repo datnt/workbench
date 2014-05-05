@@ -1,0 +1,2 @@
+FAYE_TOKEN = "Colosseum"
+

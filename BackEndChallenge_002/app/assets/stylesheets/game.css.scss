@@ -1,0 +1,31 @@
+// Place all the styles related to the Game controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.header {
+    margin: 0px;
+}
+.glyphicon-home{
+    font-size: 26px; margin: 10px;
+}
+.player_moves{
+    display: none;
+}
+.selected_moves{
+    height:200px; 
+    width:255px;
+}
+.adversary_move{
+    display: none;
+}
+.list-group{
+    width: 200px;
+}
+.list-group-item{
+    padding: 4px;
+}
+.win {
+    background: green;
+}
+.fight_btn{
+    display: none;
+}
