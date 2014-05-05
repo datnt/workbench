@@ -1,0 +1,4 @@
+$('#form_new_link').html("<%= escape_javascript( render :partial => "/shortener/shortened_urls/shared/obj_form" ) %>");
+<% if @saved_obj.nil? %>
+  $('#form_link').before("<span>The link is not valid!</span>");
+<% end %>

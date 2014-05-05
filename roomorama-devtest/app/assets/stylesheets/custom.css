@@ -1,0 +1,104 @@
+.navbar-inverse {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #F0F0F0;
+    border-radius: 0;
+    border-right: 0 none;
+    border-left: 0 none;
+    border-top: 0 none;
+}
+.navbar-collapse ul{
+    list-style: none;
+}
+.navbar-collapse ul li{
+    float: left;
+}
+.navbar-collapse ul li a {
+    border-left: 1px solid #F0F0F0;
+    color: #4B4F51;
+    font-size: 13.923px;
+    font-weight: 400;
+    padding: 15px;
+    text-shadow: none;
+    display: block;
+}
+.navbar-collapse ul li a:hover{
+    text-decoration: none;
+    color: #2980B9;
+}
+.navbar-inverse {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #F0F0F0;
+    border-radius: 0;
+    border-right: 0 none;
+    border-left: 0 none;
+    border-top: 0 none;
+  }
+  .navbar-collapse ul{
+    list-style: none;
+  }
+  .navbar-collapse ul li a {
+    border-left: 1px solid #F0F0F0;
+    color: #4B4F51;
+    font-size: 13.923px;
+    font-weight: 400;
+    padding: 15px;
+    text-shadow: none;
+    display: block;
+  }
+  .navbar-collapse ul li a:hover{
+    text-decoration: none;
+    color: #2980B9;
+  }
+  .navbar-inverse {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .navbar-collapse ul{
+    list-style: none;
+  }
+  .navbar-collapse ul li a {
+    border-left: 1px solid #F0F0F0;
+    color: #4B4F51;
+    font-size: 13.923px;
+    font-weight: 400;
+    padding: 15px;
+    text-shadow: none;
+    display: block;
+  }
+  .navbar-collapse ul li a:hover{
+    text-decoration: none;
+    color: #2980B9;
+  }
+  .jumbotron{
+    background-image: url("https://www.roomorama.com/images/home-banners/home-banner-1.jpg");
+    height: 480px;
+    text-align: center;
+    padding-top: 150px;
+  }
+  .jumbotron h1{
+    font-size: 64px;
+    color: #fff;
+  }
+  .form_cover{
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    padding: 1.5%;
+  }
+  .form_cover input{
+    font-size: 15.782px;
+    padding: 8px 5px;
+    text-indent: 8px;
+    border-radius: 4px;
+    border: 1px solid #BDC3C7;
+    width: 500px;
+  }
+  .form_cover input:focus{
+    border-color: #2980B9;
+    box-shadow: none;
+  }
+  .form_cover input.btn-danger{
+    border: 0 none;
+    width: 100px;
+    text-align: center;
+    text-indent: 0;
+  }

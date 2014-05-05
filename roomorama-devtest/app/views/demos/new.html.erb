@@ -1,0 +1,17 @@
+<%= render :partial => "/shared/header", :locals => {:fix_top => "navbar-fixed-top"} %>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Discover new adventures</h1>
+    <div id='form_new_link' class="form_cover">
+
+
+      <input id="url_str" name="url_str" placeholder="Enter your link..." type="text">
+      <a class="btn btn-danger" id="btn_submit" name="commit" type="submit">Get Link</a>
+      <div class="row" id="link_content">
+        
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<% if @saved_obj.nil? %>
+  {
+      "status": {
+        "code": "error",
+        "message": "Invalid link!"
+      },
+      "data": {
+        "link": {
+            "source_url": "<%= @source_link %>"
+        }
+      }
+  }
+<% else %>
+  {
+      "status": {
+        "code": "success",
+        "message":"Link is converted!"
+      },
+      "data": {
+        "link": {
+            "source_url": "<%= source_url(@saved_obj.id) %>",
+            "shortened_url": "<%= shortened_url(@saved_obj.id) %>"
+        }
+      }
+  }
+<% end %>

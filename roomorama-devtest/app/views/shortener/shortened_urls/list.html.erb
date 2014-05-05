@@ -1,0 +1,62 @@
+<%= render :partial => "/shared/header", :locals => {:fix_top => ""} %>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+</style>
+<!-- Modal -->
+<div class="modal fade" id="modal_content" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Showing JSON</h4>
+      </div>
+      <div class="modal-body" id="api_response" style="height: 300px;">
+        <div id="editor">
+        </div>
+        <script>
+          var editor = ace.edit("editor");
+          editor.setTheme("ace/theme/monokai");
+          editor.getSession().setMode("ace/mode/javascript");
+        </script>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id='all_links' class="container">
+  <table class="table table-hover">
+    <thead>
+    <th>URL</th>
+    <th>Short URL</th>
+    <th>Use Count</th>
+    <th>Link Stats</th>
+    <th>Link Stats By API</th>
+    </thead>
+    <tbody>
+      <% @urls.each do |obj| %>
+        <tr>
+          <td><%= obj.url %></td>
+          <td>
+            <%= link_to shortened_url(obj.id), shortened_url(obj.id) %>
+          </td>
+          <td><a href="javascript:;" data-toggle="tooltip" data-placement ="bottom" title="This value showing how many times this link has been requested."><%= obj.use_count %></a></td>
+          <td>
+            <%= link_to "Statistics", link_gas_path, "data-no-turbolink" => true, "data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "For a real application, we will modify these links to point to different Google Analytics' filter variable" %>
+          </td>
+          <td>
+            <a href="javascript:;" class="api_stats" data-toggle="tooltip" data-placement ="bottom" title="This link trigger query for Google Analytics Data by using API">Statistics</a>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

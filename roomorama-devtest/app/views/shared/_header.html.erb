@@ -1,0 +1,23 @@
+<div class="navbar navbar-inverse <%= fix_top %>" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to image_tag("https://www.roomorama.com/assets/logo-9eebc7919c03613f2e35f4927ce3e73b.png"), root_path, :class => "navbar-brand" %>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="pull-right" style="list-style: none;">
+        <li>
+          <%= link_to "New", root_path, "data-no-turbolink" => true, "data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Showing web base to create new shorten link..." %>
+        </li>
+        <li>
+          <%= link_to "API version", new_demo_path, "data-no-turbolink" => true, "data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Showing page which uses API to create a new shorten link..." %>
+        </li>
+        <li>
+          <%= link_to "View All", list_path, "data-no-turbolink" => true, "data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "Display all created links, with available statistics" %>
+        </li>
+        <li>
+          <%= link_to "Demo GA", link_gas_path, "data-no-turbolink" => true, "data-toggle" => "tooltip", "data-placement" => "bottom", "title" => "A demo page showing how Google Analytics would help to track every user request to each shortened link."  %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<%= form_for @obj, :url => shortener_shortened_url_path(@obj), :remote => true, :html => {:id => "form_link"} do |f| %>
+
+  <%= f.text_field :url, :placeholder => "Enter your link..." %>
+  <%= submit_tag "Get Link", :class => "btn btn-danger", :id => "btn_submit" %>
+
+  <% if !@saved_obj.nil? %>
+    <div class="row" id="link_content">
+      Source URL: <%= link_to source_url(@saved_obj.id), source_url(@saved_obj.id) %><br/>
+      Shortened URL: <%= link_to shortened_url(@saved_obj.id), shortened_url(@saved_obj.id) %><br/>
+      <div class="button_copy">
+        <button id='link_detail' class="" data-clipboard-text="<%= shortened_url(@saved_obj.id) %>">
+          <span>Copy</span>
+        </button>
+        <!-- Unfortunately, these links does not work localhost link, ie: localhost:3000  -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= shortened_url(@saved_obj.id) %>" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                return false;">
+                <img src="http://nuttyscientists.com/wp-content/uploads/2013/10/facebook-icon.png" style="width: 40px;"/>
+        </a>
+        <a href="https://twitter.com/share?url=<%= shortened_url(@saved_obj.id) %>" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                return false;">
+          <img src="http://img1.wikia.nocookie.net/__cb20111228065136/simpsons/images/thumb/1/11/Twitter_bird_icon.png/480px-Twitter_bird_icon.png" style="width: 40px;"/>
+        </a>
+        <a href="https://plus.google.com/share?url=<%= shortened_url(@saved_obj.id) %>" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
+                return false;">
+          <img src="http://cdn2.business2community.com/wp-content/uploads/2013/02/google_plus_logo.png" style="width: 37px;"/>
+        </a>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<script>
+          $("form#form_link").bind("ajax:beforeSend", function(e, xhr, settings) {
+            $('#btn_submit').hide();
+            $('#link_content').hide();
+          });
+</script>

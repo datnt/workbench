@@ -1,0 +1,110 @@
+<script type='text/javascript' src='https://www.google.com/jsapi'></script>
+
+<%= render :partial => "/shared/header", :locals => {:fix_top => ""} %>
+<div class="container">
+  <span>
+    This is just a demo of how to query and display google analytics data <br/>
+    Below is the data related to the link <b>"/topics/test-ie10"</b> (this link can be configured to be Roomorama's shortened link) <br/>
+    It is showing that this link had been queried 6 times, all 6 queries are from Danang City of Vietnam<br/>
+    During the time duration from May 20th 2013 until July 2nd 2013.<br/>
+  </span>
+
+  <% if  @city_statistics.data.rows.size > 0 %>
+    <div id="chart_div_city" style="width: 600px;margin: 10px auto;border: 1px solid #ddd;"></div>
+    <!-- data for geo chart, city -->
+    <div class="scroll-gas" style="max-height:187px; overflow: auto;">
+      <table style="table-layout: fixed; width: 100%;word-wrap: break-word;">
+        <thead>
+        <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">Country</th>
+        <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">City</th>
+        <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">Visits</th>
+        </thead>
+        <% @city_statistics.data.rows.each do |rows| %>
+          <tr>
+            <td style="border: 1px solid black;padding: 5px;"><%= rows[0] %></td>
+            <td style="border: 1px solid black;padding: 5px;"><%= rows[1] %></td>
+            <td style="border: 1px solid black;padding: 5px;"><%= rows[2] %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% else %>
+    No Data Available for City Statistics
+  <% end %>
+
+  <br/>
+  P/S: <br/>
+  Beside city chart, we could have: Country Traffic, Direct Traffic, Mobile Traffic, Visitor Traffic<br/>
+  For example, with Traffic statistics we could have below information:
+
+  <table style="table-layout: fixed; width: 100%;word-wrap: break-word;">
+    <thead>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      Source/Medium
+    </th>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      Visits
+    </th>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      Pages/Visit
+    </th>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      Avg. Visit Duration
+    </th>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      % New visits
+    </th>
+    <th style="border: 1px solid black;padding: 5px;background: #f3f3f3;">
+      Bounce rate
+    </th>
+    </thead>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <br><br><br>
+</div>
+
+<script type = "text/javascript" >
+<% if  @city_statistics.data.rows.size > 0 %>
+    var result_citys = [];
+    var map_city_data = [];
+    var map_city_data_item = [];
+    map_city_data_item.push('City');
+    map_city_data_item.push('Visits');
+    map_city_data.push(map_city_data_item);
+  <% @city_statistics.data.rows.each do |rows| %>
+      var map_city_data_item1 = [];
+    <% rows.each_with_index do |i,index| %>
+      <% if index == 1  %>
+          map_city_data_item1.push("<%= i %>");
+      <% elsif index == 2 %>
+          map_city_data_item1.push(<%= i %>);
+      <% end %>
+    <% end %>
+      map_city_data.push(map_city_data_item1);
+  <% end %>
+    setTimeout(RenderCityStatistics(map_city_data), 2000);
+
+<% end %>
+
+  function RenderCityStatistics(map_data) {
+    google.load("visualization", "1", {packages: ["corechart", "geochart"]});
+    google.setOnLoadCallback(function() {
+      var data = google.visualization.arrayToDataTable(map_data);
+
+      var options = {
+        displayMode: 'markers',
+        colorAxis: {colors: ['green', 'blue']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div_city'));
+      chart.draw(data, options);
+    });
+  }
+</script>
