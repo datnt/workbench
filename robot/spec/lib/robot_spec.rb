@@ -7,20 +7,8 @@ describe Robot do
       @robot = Robot.new
     end
     context "robot example" do
-      it "is named Danny" do
-        @robot.name.should == "Danny"
-      end
-
-      it "has no brains" do
-        @robot.brains.should < 1
-      end
-  
-      it "has no life" do
-        @robot.alive.should be_false
-      end
-
-      it "is rotting" do
-        @robot.rotting.should be_true
+      it "is named Dummy" do
+        @robot.name.should == "Dummy"
       end
 
       it "is hungry" do
@@ -42,6 +30,10 @@ describe Robot do
       it "has left leg" do
         @robot.left_leg.type.should_not be_true
       end
+
+      it "has head" do
+        @robot.head.should_not be_nil
+      end
     end
   end
 
@@ -52,23 +44,34 @@ describe Robot do
     context "exercise" do
       it "is standing" do
         @robot.stand
-        @robot.left_leg.position.should == "straight"
-        @robot.right_leg.position.should == "straight"
+        @robot.left_leg.is_lifted?.should eq(false)
+        @robot.right_leg.is_lifted?.should eq(false)
       end
 
       it "is falling" do
         @robot.fall
-        @robot.left_leg.position.should == "lifted"
-        @robot.right_leg.position.should == "lifted"
+        @robot.left_leg.is_lifted?.should eq(true)
+        @robot.right_leg.is_lifted?.should eq(true)
       end
-
 
       it "is jumping" do
         @robot.jump
-        @robot.left_arm.position.should == "liftup"
-        @robot.right_arm.position.should == "liftup"
-        @robot.left_leg.position.should == "lifted"
-        @robot.right_leg.position.should == "lifted"
+        @robot.left_arm.is_dropped?.should eq(false)
+        @robot.right_arm.is_dropped?.should eq(false)
+        @robot.left_leg.is_lifted?.should eq(true)
+        @robot.right_leg.is_lifted?.should eq(true)
+      end
+
+      it "opens eyes" do
+        @robot.open_eyes
+        @robot.head.left_eye.is_open?.should eq(true)
+        @robot.head.right_eye.is_open?.should eq(true)
+      end
+
+      it "closes eyes" do
+        @robot.close_eyes
+        @robot.head.left_eye.is_open?.should eq(false)
+        @robot.head.right_eye.is_open?.should eq(false)
       end
     end
   end

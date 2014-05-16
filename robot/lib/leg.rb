@@ -1,17 +1,23 @@
+require "state_machine"
+
 class Leg	
 	attr_accessor :position, :type
 
 	def initialize(leg_type = true)
 		# leg_type: true for right leg, false for left leg
-		@position = "straight"
+		@position = StateMachine.new(["straight", "lifted"])
 		@type = leg_type
 	end
 
 	def lift
-		@position = "lifted"
+		@position.transition("lifted")
 	end
 
 	def stand
-		@position = "straight"
+		@position.transition("straight")
+	end
+
+	def is_lifted?
+		@position.current_state == "lifted"
 	end
 end

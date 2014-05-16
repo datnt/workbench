@@ -7,20 +7,31 @@ describe Leg do
       @leg = Leg.new
     end
     context "leg example" do
-	  it "is initialized" do
-	  	@leg.position.should == "straight"
-	  	@leg.type.should be_true
-	  end
+  	  it "is initialized" do
+  	  	@leg.position.current_state == "straight"
+  	  	@leg.type.should be_true
+  	  end
 
-	  it "is lifted" do
-	  	@leg.lift
-	  	@leg.position.should == "lifted"
-	  end
+  	  it "is lifted" do
+  	  	@leg.lift
+  	  	@leg.position.current_state.should == "lifted"
+  	  end
 
-	  it "is straight" do
-	  	@leg.stand
-	  	@leg.position.should == "straight"
-	  end
+  	  it "is straight" do
+  	  	@leg.stand
+  	  	@leg.position.current_state.should == "straight"
+  	  end
+
+      it "has valid check for straight" do
+        @leg.stand
+        @leg.is_lifted?.should eq(false)
+      end
+
+      it "has valid check for lifted" do
+        @leg.lift
+        @leg.is_lifted?.should eq(true)
+      end
+
     end
   end
 
