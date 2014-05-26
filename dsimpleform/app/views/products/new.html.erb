@@ -1,0 +1,8 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+<%= f.association :sub_category, as: :select %>
+
+
+  <%= f.button :submit %>
+<% end %>
