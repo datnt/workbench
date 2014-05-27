@@ -28,6 +28,9 @@ gem 'spring',        group: :development
 gem 'simple_form'
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 
+gem 'cucumber-rails'
+gem 'selenium-webdriver'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
