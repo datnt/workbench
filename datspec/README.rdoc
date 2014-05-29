@@ -1,0 +1,7 @@
+== My exercise with testing with rspec
+
+These tests with Model are working fine
+
+I still having problem with testing for controller, it just does not work
+
+
