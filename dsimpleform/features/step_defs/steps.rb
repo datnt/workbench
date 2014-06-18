@@ -13,6 +13,7 @@
 World(Rack::Test::Methods)
 
 
+#These are scenarios from file overall.feature
 Given(/^I open new product site$/) do
   visit('/products/new')
 end
@@ -24,4 +25,18 @@ When(/^I input new product$/) do
 end
 Then(/^I should see the product created confirmed$/) do
   page.should have_text 'hello world'
+end
+
+
+#These are scenarios from file js_trigger.feature
+Given(/^I open show product site$/) do
+  visit('/products/1')
+end
+
+When(/^I Click on load image button$/) do
+  click_on 'Load Images'
+end
+
+Then(/^I should see all the images load successfully$/) do
+     find(:xpath, '//img[4]')
 end

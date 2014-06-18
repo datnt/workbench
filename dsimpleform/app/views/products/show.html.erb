@@ -1,0 +1,28 @@
+<div id="main">
+  <input type="button" id="load" value="Load Images" />
+  <div class="section">
+    <div id="images"></div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#load').click(function() {
+      //var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback = ?";
+      var flickerAPI = "/products/images";
+
+      $.getJSON(flickerAPI, {
+        tags: "capybara",
+        tagmode: "any",
+        format: "json"
+      }).done(function(data) {
+        $.each(data.items, function(i, item) {
+          $("<img/>").attr("src", item.media.m).width('100px').appendTo("#images");
+          if (i === 3) {
+            return false;
+          }
+        });
+      });
+    });
+  });
+</script>
