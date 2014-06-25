@@ -1,0 +1,73 @@
+<% if youtube_token.nil? %>
+  <div id="open_youtube_auth" class="">Please Init Youtube Oauth2</div>
+<% else %>
+  <div id="upload_cover">
+    <div id="edit_upload_files">Browse</div>
+  </div>
+  <div id="click_upload">
+    Click here to upload file
+  </div>
+<% end %>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // BEGIN AUTHENTICATION FOR GETTING YOUTUBE TOKEN
+    function AuthenticationPopup(url, width, height, name) {
+      var left = (screen.width / 2) - (width / 2);
+      var top = (screen.height / 2) - (height / 2);
+      width = screen.width / 2;
+      height = screen.height / 2;
+      return window.open(url, name, "menubar=no,scrollbars=yes,toolbar=no,status=no,width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+    }
+    $('#open_youtube_auth').click(function() {
+      AuthenticationPopup("/auth/youtube", 400, 400, "Youtube");
+    });
+
+    // END AUTHENTICATION FOR GETTING YOUTUBE TOKEN
+
+
+    var list_file_ext = "mp4";
+    ;
+    var count = 0;
+    var path = '/authentications/upload';
+    var settings_upload_files = {
+      url: path,
+      method: "POST",
+      allowedTypes: list_file_ext,
+      fileName: "post_file",
+      multiple: false,
+      autoSubmit: false,
+      formData: {
+        //page_id: page_id, post_id: post_id
+      },
+      onSubmit: function(files)
+      {
+        $('#upload_cover').prepend('Your video is being processed...<img style="height: 29px;" src="/loader.gif"/>');
+        $('.ajax-upload-dragdrop').hide()
+        console.log("Uploading...")
+        //$('.post-publish').button('loading');
+      },
+      onSuccess: function(files, data, xhr)
+      {
+        alert('done');
+      },
+      onError: function(files, status, errMsg)
+      {
+      }
+    };
+    //$('.ajax-upload-dragdrop').remove();
+    var upload_files = $("#edit_upload_files").uploadFile(settings_upload_files);
+
+
+
+
+
+
+
+    $('#click_upload').click(function() {
+      upload_files.startUpload();
+    });
+  });
+</script>

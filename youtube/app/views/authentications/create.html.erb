@@ -1,0 +1,64 @@
+hello world
+<div id="dragandrophandler">Drag & Drop Files Here</div>
+
+
+<div id="edit_upload_files" class="">Browse</div>
+<a href="javascript:;" id="click_upload">Click Test</a>
+<style>
+  #dragandrophandler
+  {
+    border:2px dotted #0B85A1;
+    width:400px;
+    color:#92AAB0;
+    text-align:left;vertical-align:middle;
+    padding:10px 10px 10 10px;
+    margin-bottom:10px;
+    font-size:200%;
+  }
+
+</style>
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    var list_file_ext = "mp4";
+    ;
+    var count = 0;
+    var path='/authentications/upload';
+    var settings_upload_files = {
+      url: path,
+      method: "POST",
+      allowedTypes: list_file_ext,
+      fileName: "post_file",
+      multiple: false,
+      autoSubmit: false,
+      formData: {
+        //page_id: page_id, post_id: post_id
+      },
+      onSubmit: function(files)
+      {
+        console.log("Uploading...")
+        //$('.post-publish').button('loading');
+      },
+      onSuccess: function(files, data, xhr)
+      {
+        alert('done');
+      },
+      onError: function(files, status, errMsg)
+      {
+      }
+    };
+    //$('.ajax-upload-dragdrop').remove();
+    var upload_files = $("#edit_upload_files").uploadFile(settings_upload_files);
+
+
+
+
+
+
+
+    $('#click_upload').click(function() {
+      alert('a');
+      upload_files.startUpload();
+    });
+  });
+</script>
