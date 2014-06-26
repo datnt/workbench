@@ -35,9 +35,9 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   MY_YOUTUBE_CONFIG = {
-    :client_id => "303169260475.apps.googleusercontent.com",
-    :client_secret => "CF1le4fnteramk9TeNJCk5JT",
-    :host_email => "pesomebeta@gmail.com",
-    :dev_key => "AI39si6JOo9td85INUrLGu47_aszjShYhmF-m_PjRS6c9qR6BoTzt6XYdcxv5OPda15FegjSDPCgGigWgO4xj7zpTu9sKc_vTQ"
+    :client_id => ".apps.googleusercontent.com",
+    :client_secret => "...",
+    :host_email => "...com",
+    :dev_key => "..."
   }
 end
