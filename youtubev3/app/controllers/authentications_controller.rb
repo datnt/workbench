@@ -1,7 +1,13 @@
 require 'google/api_client'
 require 'google/api_client/client_secrets'
+require 'trollop'
+
 
 YOUTUBE_SCOPE = 'https://www.googleapis.com/auth/youtube'
+
+YOUTUBE_READ_WRITE_SCOPE = 'https://www.googleapis.com/auth/youtube.upload'
+YOUTUBE_API_SERVICE_NAME = 'youtube'
+YOUTUBE_API_VERSION = 'v3'
 
 class AuthenticationsController < ApplicationController
   before_filter :init
@@ -59,7 +65,54 @@ class AuthenticationsController < ApplicationController
   def upload
     puts "p == "
     puts "p == #{params}"
-    params[:file_upload]
+    #params[:file_upload]
+    
+    #BEGIN PREPARE CLIENT
+    client = Google::APIClient.new(:application_name => $0, :application_version => '1.0')
+    youtube = client.discovered_api(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION)
+    @authorization.grant_type = nil
+    @authorization.access_token = session[:youtube_token]
+    @authorization.refresh_token = session[:youtube_refresh]
+    @authorization.expires_in = session[:expires_in]
+    client.authorization = @authorization
+    #END PREPARE CLIENT
+    
+    opts = Trollop::options do
+      opt :file, 'Video file to upload', :type => String
+      opt :title, 'Video title', :default => 'Test Title', :type => String
+      opt :description, 'Video description',
+        :default => 'Test Description', :type => String
+      opt :categoryId, 'Numeric video category. See https://developers.google.com/youtube/v3/docs/videoCategories/list',
+        :default => 22, :type => :int
+      opt :keywords, 'Video keywords, comma-separated',
+        :default => '', :type => String
+      opt :privacyStatus, 'Video privacy status: public, private, or unlisted',
+        :default => 'public', :type => String
+    end
+
+    body = {
+      :snippet => {
+        :title => opts[:title],
+        :description => opts[:description],
+        :tags => opts[:keywords].split(','),
+        :categoryId => opts[:categoryId],
+      },
+      :status => {
+        :privacyStatus => opts[:privacyStatus]
+      }
+    }
+    videos_insert_response = client.execute!(
+      :api_method => youtube.videos.insert,
+      :body_object => body,
+      :media => Google::APIClient::UploadIO.new(params[:file_upload], 'video/*'),
+      :parameters => {
+        'uploadType' => 'multipart',
+        :part => body.keys.join(',')
+      }
+    )
+
+    puts "'#{videos_insert_response.data.snippet.title}' (video id: #{videos_insert_response.data.id}) was successfully uploaded."
+
     render :text => "Done"
   end
   
@@ -95,5 +148,7 @@ class AuthenticationsController < ApplicationController
     @access_token = refresh.parsed_response["access_token"]
     #Store this token for later usage
     session[:youtube_token] = @access_token
+    session[:youtube_refresh] = saved_credential.refresh_token
+    session[:expires_in] = saved_credential.expires_in
   end
 end
