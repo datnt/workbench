@@ -11,6 +11,7 @@ YOUTUBE_API_VERSION = 'v3'
 
 class AuthenticationsController < ApplicationController
   before_filter :init
+  
   def index
     saved_credential = YoutubeV3Auth.first
     if saved_credential.nil?
@@ -63,9 +64,13 @@ class AuthenticationsController < ApplicationController
   end
   
   def upload
-    puts "p == "
-    puts "p == #{params}"
-    #params[:file_upload]
+    saved_credential = YoutubeV3Auth.first
+    if saved_credential.nil?
+      auth = @authorization
+      @url = @authorization.authorization_uri().to_s
+    else
+      refresh_the_access_token(saved_credential)
+    end
     
     #BEGIN PREPARE CLIENT
     client = Google::APIClient.new(:application_name => $0, :application_version => '1.0')
@@ -77,28 +82,28 @@ class AuthenticationsController < ApplicationController
     client.authorization = @authorization
     #END PREPARE CLIENT
     
-    opts = Trollop::options do
-      opt :file, 'Video file to upload', :type => String
-      opt :title, 'Video title', :default => 'Test Title', :type => String
-      opt :description, 'Video description',
-        :default => 'Test Description', :type => String
-      opt :categoryId, 'Numeric video category. See https://developers.google.com/youtube/v3/docs/videoCategories/list',
-        :default => 22, :type => :int
-      opt :keywords, 'Video keywords, comma-separated',
-        :default => '', :type => String
-      opt :privacyStatus, 'Video privacy status: public, private, or unlisted',
-        :default => 'public', :type => String
-    end
+    #    opts = Trollop::options do
+    #      opt :file, 'Video file to upload', :type => String
+    #      opt :title, 'Video title', :default => 'Test Title', :type => String
+    #      opt :description, 'Video description',
+    #        :default => 'Test Description', :type => String
+    #      opt :categoryId, 'Numeric video category. See https://developers.google.com/youtube/v3/docs/videoCategories/list',
+    #        :default => 22, :type => :int
+    #      opt :keywords, 'Video keywords, comma-separated',
+    #        :default => '', :type => String
+    #      opt :privacyStatus, 'Video privacy status: public, private, or unlisted',
+    #        :default => 'public', :type => String
+    #    end
 
     body = {
       :snippet => {
-        :title => opts[:title],
-        :description => opts[:description],
-        :tags => opts[:keywords].split(','),
-        :categoryId => opts[:categoryId],
+        :title => "Demo upload video with  YoutubeAPI_V3",
+        :description => "Demo upload video with  YoutubeAPI_V3",
+        :tags => 'api v3, demo'.split(','),
+        :categoryId => 22,#default value
       },
       :status => {
-        :privacyStatus => opts[:privacyStatus]
+        :privacyStatus => "public"
       }
     }
     videos_insert_response = client.execute!(
