@@ -1,0 +1,5 @@
+<% if @access_token.nil? %>
+<a href="<%= @url %>">Click here to auth</a>
+<% else %>
+  ACCESS_TOKEN = <%= @access_token %>
+<% end %>

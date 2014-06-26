@@ -1,0 +1,4 @@
+<%= form_tag(upload_authentications_path, method: "post", :remote => false, :id =>'upload_file', :multipart => true) do %>
+  <input type="file" name="file_upload"/> 
+  <%= submit_tag "Send" %>
+<% end %>
