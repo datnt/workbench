@@ -1,28 +1,20 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
+This is an exercise project which I follow closely from this book : Application Testing with Capybara - Robbins, Matthew
+I changed a little bit at some place to suit with my current system configuration.
+
+I completed this exercise since March.
+
+Then on September, I re-run command "cucumber" to review the whole application, and it stop working. 
+The error message was "unable to obtain stable firefox connection in 60 seconds"
+
+Then I found this link helpful:
+
+http://stackoverflow.com/questions/23930979/how-to-configure-cucumber-and-capybara-to-use-the-racktest-driver/23960677?noredirect=1#comment37398042_23960677
 application up and running.
 
-Things you may want to cover:
+* User "Mark Berry" had provided a change log to help us find out which version of selenium is required for which version of Firefox.
+* Here is the link to change log: http://selenium.googlecode.com/git/rb/CHANGES
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I also found another critical issue is that, when I want to test with Google Chrome browser, things seem to be a little bit trickier 
+when we have to implement Google Chrome driver as a separate location, and then we to point to that driver when run "cucumber"
