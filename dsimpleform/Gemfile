@@ -29,7 +29,7 @@ gem 'simple_form'
 gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 
 gem 'cucumber-rails'
-gem 'selenium-webdriver'
+gem 'selenium-webdriver', '2.43.0'
 gem "rspec-expectations"
 gem "rack-test"
 

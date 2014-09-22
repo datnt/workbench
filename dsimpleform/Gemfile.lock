@@ -119,11 +119,11 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    selenium-webdriver (2.42.0)
-      childprocess (>= 0.5.0)
+    selenium-webdriver (2.43.0)
+      childprocess (~> 0.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
-      websocket (~> 1.0.4)
+      websocket (~> 1.0)
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -169,7 +169,7 @@ DEPENDENCIES
   rspec-expectations
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
-  selenium-webdriver
+  selenium-webdriver (= 2.43.0)
   simple_form
   spring
   turbolinks
