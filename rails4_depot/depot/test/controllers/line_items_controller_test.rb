@@ -18,10 +18,14 @@ class LineItemsControllerTest < ActionController::TestCase
 
   test "should create line_item" do
     assert_difference('LineItem.count') do
-      post :create, line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id }
+      #post :create, line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } <-- OLD TEST, without using concern action of :set_cart
+      post :create, product_id: products(:ruby).id
     end
 
-    assert_redirected_to line_item_path(assigns(:line_item))
+    # assert_redirected_to line_item_path(assigns(:line_item)) <-- OLD TEST, without using concern action of :set_cart
+    assert_redirected_to cart_path(assigns(:line_item).cart)
+    #THEORY: method 'assign' gives us access to the instance variables that have been (or can be)
+    #assigned by controller actions for use in views.
   end
 
   test "should show line_item" do
