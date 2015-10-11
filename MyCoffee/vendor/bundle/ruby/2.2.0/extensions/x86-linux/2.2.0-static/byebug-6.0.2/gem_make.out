@@ -1,0 +1,15 @@
+/home/datnt/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20151003-3516-bhvccv.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling breakpoint.c
+compiling context.c
+compiling threads.c
+compiling locker.c
+compiling byebug.c
+linking shared-object byebug/byebug.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20151003-3516-838nyx/byebug

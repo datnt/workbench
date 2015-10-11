@@ -1,0 +1,10 @@
+asdf
+
+
+<%= simple_form_for :user, 
+    :url => url_for(:action => 'create', :controller => 'sessions'),
+    :method => 'post' do |f| %>
+    	<%= f.input :email, as: :text %>
+    	<%= f.input :password, as: :text %>
+  <%= f.button :submit %>
+<% end %>

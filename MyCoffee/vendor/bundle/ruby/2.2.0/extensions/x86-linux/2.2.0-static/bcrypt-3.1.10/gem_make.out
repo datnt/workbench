@@ -1,0 +1,15 @@
+/home/datnt/.rbenv/versions/2.2.3/bin/ruby -r ./siteconf20151003-3516-1w7qteq.rb extconf.rb
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+compiling bcrypt_ext.c
+compiling crypt.c
+linking shared-object bcrypt_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20151003-3516-9haotd
